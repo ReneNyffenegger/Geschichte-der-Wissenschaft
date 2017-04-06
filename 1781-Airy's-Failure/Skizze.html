@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <title>Airy's failure: Formeln</title>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
+    });
+  </script>
+
+  <!--
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML-full" ></script>
+  -->
+  <script type="text/javascript" async src="../../../about/MathJax/MathJax-master/MathJax.js?config=TeX-AMS_HTML-full" ></script>
+</head>
+<body>
+
+  <div style='width:500px;margin-left:auto;margin-right:auto;display:block'>
+
+
+  <!--
+  <img src='Skizze.png' alt='IMAGE MISSING... do "inkscape --export-png=Skizze.png Skizze.svg"'>
+  -->
+  
+    <object data="Skizze.svg" type="image/svg+xml"></object>
+
+  <br>
+  $ v $: Angebliche Geschwindigkeit der Erde.
+  <br>
+  $ w $: Strecke, die die Erde in der Zeit angeblich zurücklegt, in welcher ein »Lichtpartikel« durch das Teleskop geht.
+  <br>
+  $ c $: Lichtgeschwindigkeit.
+  <br>
+  $ ℓ $: Länge des Teleskopes.
+  <br>
+  $ s $: Tatsächliche Strecke, die ein »Lichtpartikel« im Teleskop verbringt.
+
+
+  <h1>Ein paar Zusammenhänge</h1>
+
+  Mit <i>Cosinussatz</i>:
+
+  $$
+    s^2 = w^2 + ℓ^2 - 2wℓ\cos(\tau)
+  $$
+  $$
+    ℓ^2 = w^2 + s^2 = 2wℓ\cos(\sigma)
+  $$
+
+  Durch Umformung (Beide Gleichungen enthalten $w^2$):
+
+  $$
+    cos(\tau) = { w + s\cos(\sigma)  \over ℓ }
+  $$
+
+  Das Licht benötigt für die Strecke $s$ gleich lang wie die Erde für die Strecke $w$:
+
+  $$
+  w = {c s \over v }
+  $$
+  <h1>Licht direkt von oben</h1>
+
+  Unter der Annahme, dass $ \sigma={\pi \over 2} $, also, dass das Licht gerade »von oben« scheint, gilt (da $ cos({\pi \over 2}) \equiv 0 $) 
+
+  $$
+  cos(\tau) = { w \over ℓ }
+  $$
+  
+  $$
+  w = ℓ\cos(\tau)
+  $$
+
+  $$
+  w\tan(\tau) = s
+  $$
+
+
+  $$
+  tan(\tau) = {s \over w} = { sv \over cs } = { v \over c }
+  $$
+
+  </div>
+
+</body>
+</html>
