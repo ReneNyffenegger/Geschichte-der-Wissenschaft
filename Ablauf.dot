@@ -1,0 +1,117 @@
+digraph A {
+
+  node [shape=plaintext];
+
+  
+   j_1669_Hooke [
+     label = <
+       <table border="1" cellborder="0">
+       <tr><td align="left">1669, <b>Robert Hooke</b></td></tr>
+       <tr><td align="left">Glaubt, Parallaxe<br align="left"/>entdeckt zu haben</td></tr>
+       </table>
+     >
+   ];
+
+   j_1670_Roemer [
+     label = <
+       <table border="1" cellborder="0">
+       <tr><td align="left">1670, <b>Rømer</b></td></tr>
+       <tr><td align="left">Jupitermonde: endliche Lichtgeschwindigkeit</td></tr>
+       </table>
+     >
+   ];
+
+   j_1694_Flamsteed [
+     label = <
+       <table border="1" cellborder="0">
+       <tr><td align="left">1694, <b>Flamsteed</b></td></tr>
+       <tr><td align="left">Macht am Polarstern<br align="left"/>die gleiche Beobachtung wie Hooke<br align="left"/></td></tr>
+       </table>
+     >
+   ];
+
+   j_1726_Bradley [
+     label = <
+       <table border="1" cellborder="0">
+       <tr><td align="left">1726, <b>Bradley</b></td></tr>
+       <tr><td align="left">Möchte Hookes Parallaxe<br align="left"/>überprüfen, entdeckt<br align="left"/>Stellare Aberration<br align="left"/></td></tr>
+       </table>
+     >
+   ];
+
+   j_1766_Boscovitch [
+     label = <
+       <table border="1" cellborder="0">
+       <tr><td align="left">1766, <b>Boscovich</b></td></tr>
+       <tr><td align="left">Schlägt Experiment mit Wasser<br align="left"/>gefülltem Teleskop vor.<br align="left"/></td></tr>
+       </table>
+     >
+   ];
+
+   j_1838_Bessel [
+     label = <
+       <table border="1" cellborder="0">
+       <tr><td align="left">1838, <b>Bessel</b></td></tr>
+       <tr><td align="left">Entdeckung der Parallaxe.</td></tr>
+       </table>
+     >
+   ];
+
+   j_1839_Arago [
+     label = <
+       <table border="1" cellborder="0">
+       <tr><td align="left">1839, <b>Arago</b></td></tr>
+       <tr><td align="left">Theorie: Wassergefülltes Teleksop muss<br align="left"/>nicht mehr geneigt werden.<br align="left"/></td></tr>
+       </table>
+     >
+   ];
+
+   j_1851_Foucault [
+     label = <
+       <table border="1" cellborder="0">
+       <tr><td align="left">1851, <b>Foucault</b></td></tr>
+       </table>
+     >
+   ];
+
+   j_1868_Hoek [
+     label = <
+       <table border="1" cellborder="0">
+       <tr><td align="left">1868, <b>Hoek</b></td></tr>
+       <tr><td align="left">Variation von Fizeaus Experiment</td></tr>
+       <tr><td align="left">GWR, S. 492: Hoek countered Fresnel</td></tr>
+       </table>
+     >
+   ];
+
+   j_1871_Airy [
+     label = <
+       <table border="1" cellborder="0">
+       <tr><td align="left">1871, <b>Airy</b></td></tr>
+       <tr><td align="left">Teleskop muss nicht gekippt werden</td></tr>
+       <tr><td align="left">GWR, S. 492 Airy countered Bradley and Fizeau</td></tr>
+       </table>
+     >
+   ];
+
+   j_1872_Mascart [
+     label = <
+       <table border="1" cellborder="0">
+       <tr><td align="left">2871, <b>Mascart</b></td></tr>
+       </table>
+     >
+   ];
+
+   j_1669_Hooke -> j_1694_Flamsteed-> j_1726_Bradley;
+
+   j_1669_Hooke -> j_1838_Bessel [color=grey];
+
+   j_1766_Boscovitch-> j_1839_Arago -> j_1871_Airy;
+
+   j_1669_Hooke -> j_1670_Roemer -> j_1694_Flamsteed -> j_1726_Bradley -> j_1766_Boscovitch -> 
+   j_1838_Bessel -> j_1839_Arago -> j_1851_Foucault -> j_1868_Hoek -> j_1871_Airy ->
+   j_1872_Mascart [style=invisible arrowhead=none];
+
+
+
+}
