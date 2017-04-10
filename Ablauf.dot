@@ -30,6 +30,15 @@ digraph A {
      >
    ];
 
+   j_1704_Newton [
+     label = <
+       <table border="1" cellborder="0">
+       <tr><td align="left">1704, <b>Newton, Opticks</b></td></tr>
+       <tr><td align="left">Teilchennatur des Lichtes wird etabliert. Nicht<br align="left"/>alles Licht ist gleich schnell<br align="left"/></td></tr>
+       </table>
+     >
+   ];
+
    j_1726_Bradley [
      label = <
        <table border="1" cellborder="0">
@@ -47,6 +56,83 @@ digraph A {
        </table>
      >
    ];
+
+   j_1800_Herschel [
+     label = <
+       <table border="1" cellborder="0">
+       <tr><td align="left">1800, <b>Herschel</b></td></tr>
+       <tr><td align="left">entdeckt infrarotes Licht.</td></tr>
+       </table>
+     >
+   ];
+
+   j_1801_Ritter [
+     label = <
+       <table border="1" cellborder="0">
+       <tr><td align="left">1801, <b>Ritter</b></td></tr>
+       <tr><td align="left">entdeckt ultraviolettes Licht.</td></tr>
+       </table>
+     >
+   ];
+
+   j_1804_Young [
+     label = <
+       <table border="1" cellborder="0">
+       <tr><td align="left">1804, <b>Young</b></td></tr>
+       <tr><td align="left">Äther bewegt sich ungehindert durch Materie.</td></tr>
+       </table>
+     >
+   ];
+
+   j_1809_Malus [
+     label = <
+       <table border="1" cellborder="0">
+       <tr><td align="left">1809, <b>Malus</b></td></tr>
+       <tr><td align="left">findet heraus, dass bei Reflexion Licht<br align="left"/>teilweise polarisiert wird.<br align="left"/></td></tr>
+       <tr><td align="left">Licht ist also eine Transversalwelle<br align="left"/>und bedarf eines <i>festen</i>, nicht<br align="left"/>flüssigen(!), Äthers.<br align="left"/></td></tr>
+       </table>
+     >
+   ];
+
+   j_1810_Arago [
+     label = <
+       <table border="1" cellborder="0">
+       <tr><td align="left">1810, <b>Arago</b></td></tr>
+       <tr><td align="left">Bewegte Glasplatte führt entweder<br align="left"/>Licht oder Äther mit.<br align="left"/></td></tr>
+       </table>
+     >
+   ];
+
+   j_181x_Arago [
+     label = <
+       <table border="1" cellborder="0">
+       <tr><td align="left">181x, <b>Arago</b></td></tr>
+       <tr><td align="left">erklärt Versuchsergebnis: Auge sieht nur<br align="left"/>Teil des Lichtspektrums.<br align="left"/></td></tr>
+       </table>
+     >
+   ];
+   j_1800_Herschel -> j_181x_Arago [color=grey];
+   j_1801_Ritter   -> j_181x_Arago [color=grey];
+   j_1810_Arago    -> j_181x_Arago;
+
+   j_1817_Fresnel [
+     label = <
+       <table border="1" cellborder="0">
+       <tr><td align="left">1817, <b>Fresnel</b></td></tr>
+       <tr><td align="left">führt die Transversalwellentheorie des Lichts ein.</td></tr>
+       </table>
+     >
+   ];
+
+   j_1818_Fresnel [
+     label = <
+       <table border="1" cellborder="0">
+       <tr><td align="left">1818, <b>Fresnel</b></td></tr>
+       <tr><td align="left">Berühmter Brief an Arago:<br align="left"/>Fresnelscher Mitführungskoeffizient erklärt<br align="left"/>Ergebnis von Arago 1810<br align="left"/></td></tr>
+       </table>
+     >
+   ];
+   j_181x_Arago -> j_1818_Fresnel;
 
    j_1838_Bessel [
      label = <
@@ -66,6 +152,23 @@ digraph A {
      >
    ];
 
+   j_1845_Stokes [
+     label = <
+       <table border="1" cellborder="0">
+       <tr><td align="left">1845, <b>Stokes</b></td></tr>
+       <tr><td align="left">versucht stellare Aberration durch Äthermitführung<br align="left"/>in der Umgebung der Erde zu erklären.<br align="left"/></td></tr>
+       </table>
+     >
+   ];
+
+   j_1851_Fizeau [
+     label = <
+       <table border="1" cellborder="0">
+       <tr><td align="left">1851, <b>Fizeau</b></td></tr>
+       </table>
+     >
+   ];
+
    j_1851_Foucault [
      label = <
        <table border="1" cellborder="0">
@@ -73,6 +176,9 @@ digraph A {
        </table>
      >
    ];
+
+
+   {rank=same j_1851_Fizeau j_1851_Foucault}
 
    j_1868_Hoek [
      label = <
@@ -88,7 +194,7 @@ digraph A {
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1871, <b>Airy</b></td></tr>
-       <tr><td align="left">Teleskop muss nicht gekippt werden</td></tr>
+       <tr><td align="left">Variation von Aragos 1810 Experiment<br align="left"/>Teleskop muss nicht gekippt werden<br align="left"/>Fresnelscher Mitführungskoeffizient bestätigt.<br align="left"/></td></tr>
        <tr><td align="left">GWR, S. 492 Airy countered Bradley and Fizeau</td></tr>
        </table>
      >
@@ -97,19 +203,30 @@ digraph A {
    j_1872_Mascart [
      label = <
        <table border="1" cellborder="0">
-       <tr><td align="left">2871, <b>Mascart</b></td></tr>
+       <tr><td align="left">1872, <b>Mascart</b></td></tr>
        </table>
      >
    ];
 
    j_1669_Hooke -> j_1694_Flamsteed-> j_1726_Bradley;
 
+   j_1726_Bradley -> j_1845_Stokes;
+
    j_1669_Hooke -> j_1838_Bessel [color=grey];
+
+   j_1810_Arago -> j_1871_Airy;
+   j_1818_Fresnel -> j_1851_Fizeau -> j_1868_Hoek;
+
 
    j_1766_Boscovitch-> j_1839_Arago -> j_1871_Airy;
 
-   j_1669_Hooke -> j_1670_Roemer -> j_1694_Flamsteed -> j_1726_Bradley -> j_1766_Boscovitch -> 
-   j_1838_Bessel -> j_1839_Arago -> j_1851_Foucault -> j_1868_Hoek -> j_1871_Airy ->
+   j_1809_Malus -> j_1817_Fresnel;
+
+   j_1818_Fresnel -> j_1871_Airy;
+
+
+   j_1669_Hooke -> j_1670_Roemer -> j_1694_Flamsteed -> j_1704_Newton -> j_1726_Bradley -> j_1766_Boscovitch -> j_1800_Herschel -> j_1801_Ritter -> j_1804_Young -> j_1809_Malus ->
+   j_1810_Arago-> j_1817_Fresnel -> j_1818_Fresnel -> j_1838_Bessel -> j_1839_Arago -> j_1845_Stokes -> j_1851_Foucault -> j_1868_Hoek -> j_1871_Airy ->
    j_1872_Mascart [style=invisible arrowhead=none];
 
 
