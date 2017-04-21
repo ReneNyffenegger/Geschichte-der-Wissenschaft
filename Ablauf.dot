@@ -216,6 +216,15 @@ digraph A {
      >
    ];
 
+   j_1931_Hubble [
+     label = <
+       <table border="1" cellborder="0">
+       <tr><td align="left">1931, <b>Hubble</b></td></tr>
+       <tr><td align="left">Veröffentlicht 'Rotverschiebung'</td></tr>
+       </table>
+     >
+   ];
+
    j_1669_Hooke -> j_1694_Flamsteed-> j_1726_Bradley;
 
    j_1726_Bradley -> j_1845_Stokes;
@@ -235,7 +244,7 @@ digraph A {
 
    j_1669_Hooke -> j_1670_Roemer -> j_1694_Flamsteed -> j_1704_Newton -> j_1726_Bradley -> j_1766_Boscovitch -> j_1800_Herschel -> j_1801_Ritter -> j_1804_Young -> j_1809_Malus ->
    j_1810_Arago-> j_1817_Fresnel -> j_1818_Fresnel -> j_1838_Bessel -> j_1839_Arago -> j_1845_Stokes -> j_1851_Foucault -> j_1868_Hoek -> j_1871_Airy ->
-   j_1872_Mascart -> j_1903_Trouton_Noble [style=invisible arrowhead=none];
+   j_1872_Mascart -> j_1903_Trouton_Noble -> j_1931_Hubble [style=invisible arrowhead=none];
 
 
 
