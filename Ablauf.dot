@@ -208,6 +208,15 @@ digraph A {
      >
    ];
 
+   j_1900_Planck [
+     label = <
+       <table border="1" cellborder="0">
+       <tr><td align="left">1903, <b>Max Planck</b></td></tr>
+       <tr><td align="left">begründet die Quantenphysik</td></tr>
+       </table>
+     >
+   ];
+
    j_1903_Trouton_Noble [
      label = <
        <table border="1" cellborder="0">
