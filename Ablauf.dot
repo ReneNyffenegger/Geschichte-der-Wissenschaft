@@ -15,8 +15,9 @@ digraph A {
    j_1670_Roemer [
      label = <
        <table border="1" cellborder="0">
-       <tr><td align="left">1670, <b>Rømer</b></td></tr>
+       <tr><td align="left">1670 (1675?), <b>Rømer</b></td></tr>
        <tr><td align="left">Jupitermonde: endliche Lichtgeschwindigkeit</td></tr>
+       <tr><td align="left">Ätherhypothese wird wohl wahr sein müssen.</td></tr>
        </table>
      >
    ];
