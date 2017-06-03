@@ -10,6 +10,17 @@ digraph A {
      >
    ];
 
+   j_antike_lichtstrahlen [
+     label = <
+       <table border="1" cellborder="0">
+       <tr><td align="left">Antike, <b>Lichtstrahlen</b></td></tr>
+       <tr><td align="left">Vom Auge ausgehend, tasten Welt ab</td></tr>
+       </table>
+     >
+   ];
+
+   {rank=same j_Aristoteles j_antike_lichtstrahlen}
+
    j_1554_Benedetti [
      label = <
        <table border="1" cellborder="0">
@@ -74,6 +85,18 @@ digraph A {
      >
    ];
 
+   j_1669_Newton [
+     label = <
+       <table border="1" cellborder="0">
+       <tr><td align="left">1669, <b>Newton</b></td></tr>
+       <tr><td align="left">Emanationstheorie</td></tr>
+       </table>
+     >
+   ];
+
+
+   {rank=same j_1669_Hooke j_1669_Newton}
+
    j_1670_Roemer [
      label = <
        <table border="1" cellborder="0">
@@ -83,6 +106,17 @@ digraph A {
        </table>
      >
    ];
+
+   j_1678_Huygens [
+     label = <
+       <table border="1" cellborder="0">
+       <tr><td align="left">1678, <b>Huygens</b></td></tr>
+       <tr><td align="left">Wellentheorie</td></tr>
+       </table>
+     >
+   ];
+
+   j_antike_lichtstrahlen -> j_1669_Newton -> j_1678_Huygens;
 
    j_1687_Newton [
      label = <
@@ -389,7 +423,7 @@ digraph A {
 
 
    j_Aristoteles -> j_1554_Benedetti -> j_1572_Brahe -> j_1577_Brahe -> j_1592_De_Motu -> j_1604_Kepler -> j_1647_Pascal ->
-   j_1669_Hooke -> j_1670_Roemer -> j_1687_Newton -> j_1694_Flamsteed -> j_1704_Newton -> j_1726_Bradley -> j_1766_Boscovitch -> j_1800_Herschel -> j_1801_Ritter -> j_1804_Young -> 
+   j_1669_Hooke -> j_1670_Roemer -> j_1678_Huygens -> j_1687_Newton -> j_1694_Flamsteed -> j_1704_Newton -> j_1726_Bradley -> j_1766_Boscovitch -> j_1800_Herschel -> j_1801_Ritter -> j_1804_Young -> 
    j_1808_Dalton -> j_1809_Malus ->
    j_1810_Arago-> j_1817_Fresnel -> j_1818_Fresnel -> j_1834_Faraday -> j_1838_Bessel -> j_1839_Arago -> j_1845_Stokes -> j_1851_Foucault -> j_1868_Hoek -> j_1868_Mendelejew ->
    j_1871_Airy -> j_1872_Mascart -> j_1895_Lorentz -> j_1900_Planck -> j_1903_Trouton_Noble -> j_1911_Rutherford -> j_1931_Hubble -> j_1938_Hahn_Strassmann [style=invisible arrowhead=none];
