@@ -45,6 +45,13 @@ digraph A {
      >
    ]
 
+   j_1510_Commentariolus [
+     label = <
+       <table border="1" cellborder="0">
+       <tr><td align="left">1510, Kopernikus: <b>Commentariolus</b></td></tr>
+       </table>
+     >
+   ];
    
    j_1517_Reformation [
      label = <
@@ -69,6 +76,7 @@ digraph A {
        </table>
      >
    ];
+   j_1510_Commentariolus -> j_1543_De_Revolutionibus;
 
    j_1550_Peucer [
      label = <
@@ -89,17 +97,6 @@ digraph A {
    j_1543_De_Revolutionibus -> j_1551_Prutenische_Tafeln;
 
 
-
-   j_1582_Kalenderreform [
-     label = <
-       <table border="1" cellborder="0">
-       <tr><td align="left">1582, <b>Kalenderreform</b></td></tr>
-       </table>
-     >
-   ];
-   j_1551_Prutenische_Tafeln -> j_1582_Kalenderreform;
-
-
    j_1554_Benedetti [
      label = <
        <table border="1" cellborder="0">
@@ -117,6 +114,7 @@ digraph A {
        </table>
       >
    ];
+
 
    j_1572_Brahe [
      label = <
@@ -138,7 +136,26 @@ digraph A {
      >
    ];
 
-   j_1592_De_Motu[
+   j_1582_Kalenderreform [
+     label = <
+       <table border="1" cellborder="0">
+       <tr><td align="left">1582, <b>Kalenderreform</b></td></tr>
+       </table>
+     >
+   ];
+   j_1551_Prutenische_Tafeln -> j_1582_Kalenderreform;
+
+   j_1587_Reimers [
+     label = <
+       <table border="1" cellborder="0">
+       <tr><td align="left">1587, Reimers übersetzt</td></tr>
+       <tr><td align="left"><b>De Revolutionibus</b> ins Deutsche</td></tr>
+       </table>
+     >
+   ];
+   j_1543_De_Revolutionibus -> j_1587_Reimers;
+
+   j_1592_De_Motu [
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1592, <b>Galileo Galilei</b></td></tr>
@@ -711,8 +728,8 @@ digraph A {
 
 
 
-   j_Aristoteles -> j_1080_Toledaner_Tafeln -> j_1270_Alfonsinische_Tafeln -> j_1492_Kolumbus -> j_1517_Reformation -> j_1539_luther -> j_1543_De_Revolutionibus -> j_1550_Peucer -> j_1551_Prutenische_Tafeln -> j_1554_Benedetti -> j_1572_Brahe ->
-   j_1577_Brahe -> j_1582_Kalenderreform ->
+   j_Aristoteles -> j_1080_Toledaner_Tafeln -> j_1270_Alfonsinische_Tafeln -> j_1492_Kolumbus -> j_1510_Commentariolus -> j_1517_Reformation -> j_1539_luther -> j_1543_De_Revolutionibus -> j_1550_Peucer -> j_1551_Prutenische_Tafeln -> j_1554_Benedetti -> j_1572_Brahe ->
+   j_1577_Brahe -> j_1582_Kalenderreform -> j_1587_Reimers -> 
    j_1592_De_Motu -> j_1596_Mysterium_Cosmographicum -> j_1604_Kepler -> j_1609_Astronomia_nova -> j_1610_sidereus_nuncius -> j_1612_sonnenflecken -> j_1616_index -> j_1627_Rudolfinische_Tafeln -> j_1643_Torricelli -> j_1647_Pascal ->
    j_1669_Hooke -> j_1670_Roemer -> j_1678_Huygens -> j_1687_Newton -> j_1694_Flamsteed -> j_1704_Newton -> j_1717_Newton -> j_1726_Bradley -> j_1766_Boscovitch -> j_1800_Herschel ->
    j_1801_Ritter -> j_1802_Young -> j_1804_Young -> j_1808_Dalton -> j_1809_Malus ->
