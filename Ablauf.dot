@@ -2,82 +2,84 @@ digraph A {
 
   node [shape=plaintext];
 
-   j_Aristoteles [
+   j_Aristoteles [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">???, <b>Aristoteles</b></td></tr>
        </table>
      >
-   ];
+   ]; //_}
 
-   j_antike_lichtstrahlen [
+   j_antike_lichtstrahlen [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">Antike, <b>Lichtstrahlen</b></td></tr>
        <tr><td align="left">Vom Auge ausgehend, tasten Welt ab</td></tr>
        </table>
      >
-   ];
+   ]; //_}
 
    {rank=same j_Aristoteles j_antike_lichtstrahlen}
 
-   j_1080_Toledaner_Tafeln [
+   j_1080_Toledaner_Tafeln [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1080 <b>Toledaner Tafeln</b></td></tr>
        </table>
      >
-   ];
+   ]; //_}
 
-   j_1270_Alfonsinische_Tafeln [
+   j_1270_Alfonsinische_Tafeln [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1270 <b>Alfonsinische Tafeln</b></td></tr>
        </table>
      >
-   ];
+   ]; //_}
 
-   j_1492_Kolumbus [
+   j_1492_Kolumbus [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1492, <b>Kolumbus</b> entdeckt(?) Amerika</td></tr>
        </table>
      >
-   ]
+   ] //_}
 
-   j_1510_Commentariolus [
+ //_{ 15xx
+
+   j_1510_Commentariolus [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1510, Kopernikus: <b>Commentariolus</b></td></tr>
        </table>
      >
-   ];
+   ]; //_}
 
-   j_1513_Middelburg [
+   j_1513_Middelburg [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1513, Anfrage von Middleburg<br align="left"/>an Kopernikus zur<br align="left"/>Kalenderreform.<br align="left"/></td></tr>
        </table>
      >
-   ];
+   ]; //_}
    
-   j_1517_Reformation [
+   j_1517_Reformation [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1517, <b>Reformation</b></td></tr>
        </table>
      >
-   ];
+   ]; //_}
 
-   j_1539_luther [
+   j_1539_luther [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1539, Luthers <b>Tischrede</b></td></tr>
        </table>
      >
-   ];
+   ]; //_}
 
-   j_1543_De_Revolutionibus [
+   j_1543_De_Revolutionibus [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1543, <b>De Revolutionibus</b></td></tr>
@@ -86,17 +88,17 @@ digraph A {
    ];
    j_1513_Middelburg -> j_1543_De_Revolutionibus;
    j_1510_Commentariolus -> j_1543_De_Revolutionibus;
+ //_}
 
-   j_1550_Peucer [
+   j_1550_Peucer [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1550, Peucer <b>Bibl. Einwände gegen Koopernikus</b></td></tr>
        </table>
      >
-   ];
+   ]; //_}
 
-
-   j_1551_Prutenische_Tafeln [
+   j_1551_Prutenische_Tafeln [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1551, <b>Prutenische Tafeln</b></td></tr>
@@ -104,48 +106,49 @@ digraph A {
      >
    ];
    j_1543_De_Revolutionibus -> j_1551_Prutenische_Tafeln;
+ //_}
 
-
-   j_1554_Benedetti [
+   j_1554_Benedetti [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1554, <b>Giovanni B. Benedetti</b></td></tr>
        <tr><td align="left">Widerlegung von Aristoteles »Fallgeschwindigkeit«</td></tr>
        </table>
      >
-   ];
+   ]; //_}
 
-   j_1572_Tycho [
+ //_{ 1572
+   j_1572_Tycho [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1572, <b>Tycho</b></td></tr>
        <tr><td align="left">Beobachten einen Kometen: offenbar nicht an Sphären angemacht</td></tr>
        </table>
       >
-   ];
+   ]; //_}
 
-
-   j_1572_Brahe [
+   j_1572_Brahe [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1572, <b>Tycho Brahe</b></td></tr>
        <tr><td align="left">Beobachtung einer Supernova</td></tr>
        </table>
      >
-   ];
+   ]; //_}
 
    {rank=same j_1572_Tycho j_1572_Brahe}
+ //_}
 
-   j_1577_Brahe [
+   j_1577_Brahe [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1577, <b>Tycho Brahe</b></td></tr>
        <tr><td align="left">Messung von Parallaxe bei Kometen</td></tr>
        </table>
      >
-   ];
+   ]; //_}
 
-   j_1582_Kalenderreform [
+   j_1582_Kalenderreform [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1582, <b>Kalenderreform</b></td></tr>
@@ -153,8 +156,9 @@ digraph A {
      >
    ];
    j_1551_Prutenische_Tafeln -> j_1582_Kalenderreform;
+ //_}
 
-   j_1587_Reimers [
+   j_1587_Reimers [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1587, Reimers übersetzt</td></tr>
@@ -163,25 +167,30 @@ digraph A {
      >
    ];
    j_1543_De_Revolutionibus -> j_1587_Reimers;
+ //_}
 
-   j_1592_De_Motu [
+   j_1592_De_Motu [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1592, <b>Galileo Galilei</b></td></tr>
        <tr><td align="left">De Motu Antiquiora<br align="left"/>(Veröff. 1687)</td></tr>
        </table>
      >
-   ];
+   ]; //_}
 
-   j_1596_Mysterium_Cosmographicum [
+   j_1596_Mysterium_Cosmographicum [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1596, Kepler, <b>Mysterium Cosmographicum</b></td></tr>
        </table>
      >
-   ];
+   ]; //_}
 
-   j_1604_Kepler [
+ //_}
+
+ //_{ 16xx
+
+   j_1604_Kepler [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1604, <b>Johannes Kepler</b></td></tr>
@@ -189,10 +198,10 @@ digraph A {
        </table>
      >
    ];
-
    j_1572_Brahe -> j_1604_Kepler;
+   //_}
 
-   j_1609_Astronomia_nova [
+   j_1609_Astronomia_nova [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1609, Kepler, <b>Astronomia nova</b></td></tr>
@@ -200,24 +209,25 @@ digraph A {
      >
    ];
    j_1596_Mysterium_Cosmographicum -> j_1609_Astronomia_nova;
+ //_}
 
-   j_1610_sidereus_nuncius [
+   j_1610_sidereus_nuncius [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1610, Galileo, <b>Sidereus Nuncius</b></td></tr>
        </table>
      >
-   ];
+   ]; //_}
 
-   j_1612_sonnenflecken [
+   j_1612_sonnenflecken [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1612, Galileo, <b>Sonnenflecken</b></td></tr>
        </table>
      >
-   ];
+   ]; //_}
 
-   j_1616_index [
+   j_1616_index [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1616, <b>Index prohibitorum librorum</b></td></tr>
@@ -225,8 +235,9 @@ digraph A {
      >
    ];
    j_1543_De_Revolutionibus -> j_1616_index;
+ //_}
 
-   j_1627_Rudolfinische_Tafeln [
+   j_1627_Rudolfinische_Tafeln [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1627, Kepler: <b>Rudolfinische Tafeln</b></td></tr>
@@ -234,58 +245,66 @@ digraph A {
      >
    ];
    j_1080_Toledaner_Tafeln -> j_1270_Alfonsinische_Tafeln -> j_1551_Prutenische_Tafeln -> j_1627_Rudolfinische_Tafeln [color="#33e651"]; /* Ephemeriden */
+ //_}
 
-   j_1643_Torricelli [
+   j_1633_Inquisition [ //_{
+     label = <
+       <table border="1" cellborder="0">
+       <tr><td align="left">1633, <b>Inquisition</b></td></tr>
+       <tr><td align="left">Galileo muss abschwören</td></tr>
+       </table>
+     >
+   ]; //_}
+
+   j_1643_Torricelli [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1643, <b>Torricelli-Experiment</b></td></tr>
        <tr><td align="left">Ergebnis beginnt neue Debatte<br align="left"/>über <i>Horror Vacui</i><br align="left"/></td></tr>
        </table>
      >
-   ];
+   ]; //_}
 
-
-
-   j_1647_Pascal [
+   j_1647_Pascal [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1647, <b>Blaise Pascal</b></td></tr>
        <tr><td align="left">Widerlegt Horror Vacui</td></tr>
        </table>
      >
-   ];
-  
-   j_1669_Hooke [
+   ]; //_}
+
+   //_{ 1699
+   j_1669_Hooke [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1669, <b>Robert Hooke</b></td></tr>
        <tr><td align="left">Glaubt, Parallaxe<br align="left"/>entdeckt zu haben</td></tr>
        </table>
      >
-   ];
+   ]; //_}
 
-   j_1669_Bartholin [
+   j_1669_Bartholin [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1669, <b>Bartholin</b></td></tr>
        <tr><td align="left">Beobachtet Doppelbrechung am Calcit</td></tr>
        </table>
      >
-   ];
+   ]; //_}
 
-   j_1669_Newton [
+   j_1669_Newton [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1669, <b>Newton</b></td></tr>
        <tr><td align="left">Emanationstheorie</td></tr>
        </table>
      >
-   ];
-
-
+   ]; //_}
    {rank=same j_1669_Hooke j_1669_Newton j_1669_Bartholin}
+ //_}
 
-   j_1670_Roemer [
+   j_1670_Roemer [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1670 (1675?), <b>Rømer</b></td></tr>
@@ -294,19 +313,18 @@ digraph A {
        <tr><td align="left">Ätherhypothese wird wohl wahr sein müssen.</td></tr>
        </table>
      >
-   ];
+   ]; //_}
 
-   j_1678_Huygens [
+   j_1678_Huygens [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1678, <b>Huygens</b></td></tr>
        <tr><td align="left">Wellentheorie</td></tr>
        </table>
      >
-   ];
+   ]; //_}
 
-
-   j_1687_Newton [
+   j_1687_Newton [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1687, Newton: <b>Principia Mathematica</b></td></tr>
@@ -315,16 +333,18 @@ digraph A {
      >
    ];
    j_1609_Astronomia_nova -> j_1687_Newton [ label="Newton liefert Formeln" lblstyle="above, sloped"];
-   j_1627_Rudolfinische_Tafeln -> j_1687_Newton;
+   j_1627_Rudolfinische_Tafeln -> j_1687_Newton; //_}
 
-   j_1694_Flamsteed [
+   j_1694_Flamsteed [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1694, <b>Flamsteed</b></td></tr>
        <tr><td align="left">Macht am Polarstern<br align="left"/>die gleiche Beobachtung wie Hooke<br align="left"/></td></tr>
        </table>
      >
-   ];
+   ]; //_}
+
+ //_}
 
    j_1704_Newton [
      label = <
@@ -739,7 +759,7 @@ digraph A {
 
    j_Aristoteles -> j_1080_Toledaner_Tafeln -> j_1270_Alfonsinische_Tafeln -> j_1492_Kolumbus -> j_1510_Commentariolus -> j_1513_Middelburg -> j_1517_Reformation -> j_1539_luther -> j_1543_De_Revolutionibus -> j_1550_Peucer -> j_1551_Prutenische_Tafeln -> j_1554_Benedetti -> j_1572_Brahe ->
    j_1577_Brahe -> j_1582_Kalenderreform -> j_1587_Reimers -> 
-   j_1592_De_Motu -> j_1596_Mysterium_Cosmographicum -> j_1604_Kepler -> j_1609_Astronomia_nova -> j_1610_sidereus_nuncius -> j_1612_sonnenflecken -> j_1616_index -> j_1627_Rudolfinische_Tafeln -> j_1643_Torricelli -> j_1647_Pascal ->
+   j_1592_De_Motu -> j_1596_Mysterium_Cosmographicum -> j_1604_Kepler -> j_1609_Astronomia_nova -> j_1610_sidereus_nuncius -> j_1612_sonnenflecken -> j_1616_index -> j_1627_Rudolfinische_Tafeln -> j_1633_Inquisition -> j_1643_Torricelli -> j_1647_Pascal ->
    j_1669_Hooke -> j_1670_Roemer -> j_1678_Huygens -> j_1687_Newton -> j_1694_Flamsteed -> j_1704_Newton -> j_1717_Newton -> j_1726_Bradley -> j_1766_Boscovitch -> j_1800_Herschel ->
    j_1801_Ritter -> j_1802_Young -> j_1804_Young -> j_1808_Dalton -> j_1809_Malus ->
    j_1810_Arago-> j_1817_Fresnel -> j_1818_Fresnel -> j_1834_Faraday -> j_1838_Bessel -> j_1839_Arago -> j_1845_Stokes -> j_1851_Foucault -> j_1868_Hoek -> j_1868_Mendelejew -> j_1870_Maxwell ->
