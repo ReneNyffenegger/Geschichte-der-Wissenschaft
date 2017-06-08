@@ -346,25 +346,27 @@ digraph A {
 
  //_}
 
-   j_1704_Newton [
+ //_{ 17xx
+
+   j_1704_Newton [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1704, <b>Newton, Opticks</b></td></tr>
        <tr><td align="left">Teilchennatur des Lichtes wird etabliert. Nicht<br align="left"/>alles Licht ist gleich schnell<br align="left"/></td></tr>
        </table>
      >
-   ];
+   ]; //_}
 
-   j_1717_Newton [
+   j_1717_Newton [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1717, <b>Newton, Opticks</b> (neue Ausgabe)</td></tr>
        <tr><td align="left">Ansichten über Gravitation,<br align="left"/>Äther besteht aus Teilchen<br align="left"/></td></tr>
        </table>
      >
-   ];
+   ]; //_}
 
-   j_1726_Bradley [
+   j_1726_Bradley [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1726, <b>Bradley</b></td></tr>
@@ -372,65 +374,68 @@ digraph A {
        <tr><td align="left">Angebl. 1. (astron.) Verifikation von Kopernikus.</td></tr>
        </table>
      >
-   ];
+   ]; //_}
 
-   j_1766_Boscovitch [
+   j_1766_Boscovitch [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1766, <b>Boscovich</b></td></tr>
        <tr><td align="left">Schlägt Experiment mit Wasser<br align="left"/>gefülltem Teleskop vor.<br align="left"/></td></tr>
        </table>
      >
-   ];
+   ]; //_}
 
-   j_1800_Herschel [
+   j_1800_Herschel [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1800, <b>Herschel</b></td></tr>
        <tr><td align="left">entdeckt infrarotes Licht.</td></tr>
        </table>
      >
-   ];
+   ]; //_}
+ //_}
 
-   j_1801_Ritter [
+ //_{ 18xx
+ //_{ 1800-
+   j_1801_Ritter [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1801, <b>Ritter</b></td></tr>
        <tr><td align="left">entdeckt ultraviolettes Licht.</td></tr>
        </table>
      >
-   ];
+   ]; //_}
 
-   j_1802_Young [
+   j_1802_Young [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1802, <b>Young</b></td></tr>
        <tr><td align="left">Doppelspaltexperiment</td></tr>
        </table>
      >
-   ];
+   ]; //_}
 
    j_antike_lichtstrahlen -> j_1669_Newton -> j_1678_Huygens -> j_1802_Young; /* Natur des Lichts */
 
-   j_1804_Young [
+   j_1804_Young [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1804, <b>Young</b></td></tr>
        <tr><td align="left">Äther bewegt sich ungehindert durch Materie.</td></tr>
        </table>
      >
-   ];
+   ]; //_}
 
-   j_1808_Dalton [ /*  2016-Mettenheim...pdf */
+   j_1808_Dalton [ /*  2016-Mettenheim...pdf */ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1808, <b>Dalton</b></td></tr> 
        <tr><td align="left">Elemente bestehen aus gleichartigen<br align="left"/>letzten Teilchen.<br align="left"/></td></tr> 
        </table>
      >
-   ];
+   ]; //_}
 
-   j_1809_Malus [
+   j_1809_Malus [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1809, <b>Malus</b></td></tr>
@@ -438,18 +443,18 @@ digraph A {
        <tr><td align="left">Licht ist also eine Transversalwelle<br align="left"/>und bedarf eines <i>festen</i>, nicht<br align="left"/>flüssigen(!), Äthers.<br align="left"/></td></tr>
        </table>
      >
-   ];
+   ]; //_}
 
-   j_1810_Arago [
+   j_1810_Arago [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1810, <b>Arago</b></td></tr>
        <tr><td align="left">Bewegte Glasplatte führt entweder<br align="left"/>Licht oder Äther mit.<br align="left"/></td></tr>
        </table>
      >
-   ];
+   ]; //_}
 
-   j_181x_Arago [
+   j_181x_Arago [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">181x, <b>Arago</b></td></tr>
@@ -459,18 +464,18 @@ digraph A {
    ];
    j_1800_Herschel -> j_181x_Arago [color=grey];
    j_1801_Ritter   -> j_181x_Arago [color=grey];
-   j_1810_Arago    -> j_181x_Arago;
+   j_1810_Arago    -> j_181x_Arago; //_}
 
-   j_1817_Fresnel [
+   j_1817_Fresnel [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1817, <b>Fresnel</b></td></tr>
        <tr><td align="left">führt die Transversalwellentheorie des Lichts ein.</td></tr>
        </table>
      >
-   ];
+   ]; //_}
 
-   j_1818_Fresnel [
+   j_1818_Fresnel [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1818, <b>Fresnel</b></td></tr>
@@ -478,46 +483,75 @@ digraph A {
        </table>
      >
    ];
-   j_181x_Arago -> j_1818_Fresnel;
+   j_181x_Arago -> j_1818_Fresnel; //_}
 
+ //_}
+ //_{ 1820-
 
-   j_1831_Cauchy [
+   j_1820_Orsted [ //_{
+     label = <
+       <table border="1" cellborder="0">
+       <tr><td align="left">1820, Ørsted: <b>magn. Wirk. d. elektr. Stromes</b></td></tr>
+       </table>
+     >
+   ]; //_}
+
+   j_1827_Brown [ //_{
+     label = <
+       <table border="1" cellborder="0">
+       <tr><td align="left">1827, Brown <b>Zitterbewegung</b></td></tr>
+       </table>
+     >
+   ]; //_}
+
+   j_1831_Cauchy [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1831, <b>Cauchy</b></td></tr>
        <tr><td align="left">Solider Äther bedeutet, dass Materie Äther mitführt.</td></tr>
        </table>
      >
-   ];
+   ]; //_}
 
-   j_1834_Faraday [ /*  2016-Mettenheim...pdf */
+   j_1831_Faraday [ //_{
+     label = <
+       <table border="1" cellborder="0">
+       <tr><td align="left">1831, Faraday: <b>bew. Magn. erz. el. Strom</b></td></tr>
+       </table>
+     >
+   ]; //_}
+   {rank=same j_1831_Faraday j_1831_Cauchy}
+
+   j_1834_Faraday [ /*  2016-Mettenheim...pdf */ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1834, <b>Faraday</b></td></tr> 
        <tr><td align="left">Elektrolyse</td></tr> 
        </table>
      >
-   ];
+   ]; //_}
 
-   j_1838_Bessel [
+   j_1838_Bessel [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1838, <b>Bessel</b></td></tr>
        <tr><td align="left">Entdeckung der Parallaxe.</td></tr>
        </table>
      >
-   ];
+   ]; //_}
 
-   j_1839_Arago [
+   j_1839_Arago [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1839, <b>Arago</b></td></tr>
        <tr><td align="left">Theorie: Wassergefülltes Teleksop muss<br align="left"/>nicht mehr geneigt werden.<br align="left"/></td></tr>
        </table>
      >
-   ];
+   ]; //_}
+ //_}
+ //_{ 1840- 
 
-   j_1845_Stokes [
+   j_1845_Stokes [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1845, <b>Stokes</b></td></tr>
@@ -525,29 +559,38 @@ digraph A {
        </table>
      >
    ];
-
    j_1831_Cauchy -> j_1845_Stokes;
+   //_}
 
-   j_1851_Fizeau [
+   j_1851_Fizeau [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1851, <b>Fizeau</b></td></tr>
        </table>
      >
-   ];
+   ]; //_}
 
-   j_1851_Foucault [
+   j_1851_Foucault [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1851, <b>Foucault</b></td></tr>
        </table>
      >
-   ];
-
-
+   ]; //_}
    {rank=same j_1851_Fizeau j_1851_Foucault}
 
-   j_1868_Hoek [
+   j_1864_Maxwell_Electromagnetic_Field [ //_{
+     label = <
+       <table border="1" cellborder="0">
+       <tr><td align="left">1864, Maxwell <b>Electromagnetic Field</b></td></tr>
+       <tr><td align="left"><b>Äther</b> existiert</td></tr>
+       </table>
+     >
+   ]; 
+   
+   //_}
+
+   j_1868_Hoek [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1868, <b>Hoek</b></td></tr>
@@ -555,33 +598,31 @@ digraph A {
        <tr><td align="left">GWR, S. 492: Hoek countered Fresnel</td></tr>
        </table>
      >
-   ];
+   ]; //_}
 
-   j_1868_Mendelejew [ /*  2016-Mettenheim...pdf */
+   j_1868_Mendelejew [ /*  2016-Mettenheim...pdf */ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1868/9, <b>Mendelejew</b></td></tr> 
        <tr><td align="left">Periodensystem der Elemente</td></tr> 
        </table>
      >
-   ];
-
-
+   ]; //_}
    {rank=same j_1868_Mendelejew j_1868_Hoek }
 
-   j_1870_Maxwell [
+   j_1870_Maxwell [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">ca. 1870, <b>Maxwell</b></td></tr>
        <tr><td align="left">Lichtgeschwindigkeit = c, kein Inertialsystem im Vakuum!</td></tr>
        </table>
       >
-   ];
-
+   ]; //_}
 
    j_1808_Dalton -> j_1868_Mendelejew;
-
-   j_1871_Airy [
+ //_}
+ //_{ 1860-
+   j_1871_Airy [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1871, <b>Airy</b></td></tr>
@@ -589,17 +630,17 @@ digraph A {
        <tr><td align="left">GWR, S. 492 Airy countered Bradley and Fizeau</td></tr>
        </table>
      >
-   ];
+   ]; //_}
 
-   j_1872_Mascart [
+   j_1872_Mascart [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1872, <b>Mascart</b></td></tr>
        </table>
      >
-   ];
+   ]; //_}
 
-   j_1873_Veltmann [
+   j_1873_Veltmann [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1873, <b>Veltmann</b></td></tr>
@@ -608,9 +649,19 @@ digraph A {
        </table>
      >
    ];
-   j_1818_Fresnel -> j_1873_Veltmann;
+   j_1818_Fresnel -> j_1873_Veltmann; //_}
 
-   j_1887_MM [
+   j_1877_Hertz [ //_{
+     label = <
+       <table border="1" cellborder="0">
+       <tr><td align="left">1877, Hertz demonstriert <b>elektr. Wellen</b></td></tr>
+       </table>
+     >
+   ];
+   
+   //_}
+
+   j_1887_MM [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1887, <b>Michelson Morley</b></td></tr>
@@ -620,16 +671,31 @@ digraph A {
      >
    ];
 
-   j_1889_FitzGerald [
+   j_1864_Maxwell_Electromagnetic_Field -> j_1887_MM;
+   
+   //_}
+
+   j_1887_Hertz_Photoeffekt [ //_{
+     label = <
+       <table border="1" cellborder="0">
+       <tr><td align="left">1887, Hertz, <b>Photoeffekt</b></td></tr>
+       <tr><td align="left">Keine Erklärung</td></tr>
+       </table>
+     >
+   ]; //_}
+   
+   {rank=same j_1887_Hertz_Photoeffekt j_1887_MM}
+
+   j_1889_FitzGerald [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1889, <b>FitzGerald</b></td></tr>
        <tr><td align="left">Längenkontraktion als Erklärung für<br align="left"/>stationären Äther und MMX<br align="left"/></td></tr>
        </table>
       >
-   ];
+   ]; //_}
 
-   j_1895_Lorentz [ /*  2016-Mettenheim...pdf */
+   j_1895_Lorentz [ /*  2016-Mettenheim...pdf */ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1895, <b>Lorentz</b></td></tr> 
@@ -637,54 +703,121 @@ digraph A {
        </table>
      >
    ];
+   j_1834_Faraday -> j_1895_Lorentz; //_}
 
-   j_1834_Faraday -> j_1895_Lorentz;
-
-   j_1900_Planck [
+   j_1896_Becquerel [ //_{
      label = <
        <table border="1" cellborder="0">
-       <tr><td align="left">1903, <b>Max Planck</b></td></tr>
+       <tr><td align="left">1896, Becquerel <b>radioakt. Zerfall</b></td></tr>
+       <tr><td align="left">Keine Erklärung</td></tr>
+       </table>
+     >
+    ]; //_}
+ //_}
+
+ //_}
+
+ //_{ 19xx
+
+   j_1900_Planck [ //_{
+     label = <
+       <table border="1" cellborder="0">
+       <tr><td align="left">1900, <b>Max Planck</b></td></tr>
        <tr><td align="left">begründet die Quantenphysik</td></tr>
        </table>
      >
-   ];
-
-   j_1925_Michelson_Gale [
+   ]; //_}
+  
+   j_1901_Marconi [ //_{
      label = <
        <table border="1" cellborder="0">
-       <tr><td align="left">1925, <b>Michelson Gale</b></td></tr>
+       <tr><td align="left">1901, <b>Guglielmo Marconi</b></td></tr>
+       <tr><td align="left">Morst über Atlantik</td></tr>
        </table>
      >
-    ];
+   ]; 
+   
+   j_1820_Orsted -> j_1831_Faraday -> j_1864_Maxwell_Electromagnetic_Field -> j_1877_Hertz -> j_1901_Marconi [color="#5533b7"];
+   //_}
 
-   j_1903_Trouton_Noble [
+   j_1903_Trouton_Noble [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1903, <b>Trouton-Noble</b></td></tr>
        </table>
      >
-   ];
+   ]; //_}
+
+   j_1905_Einstein_Photoeffekt [ //_{
+     label = <
+       <table border="1" cellborder="0">
+       <tr><td align="left">1905, Einstein, <b>Photoeffekt Gale</b></td></tr>
+       </table>
+     >
+    ];
+    j_1887_Hertz_Photoeffekt -> j_1905_Einstein_Photoeffekt;
+    
+    //_}
+
+   j_1905_Einstein_Brown [ //_{
+     label = <
+       <table border="1" cellborder="0">
+       <tr><td align="left">1905, Einstein, <b>Brownsche Bewegung</b></td></tr>
+       </table>
+     >
+    ];
+
+    //_}
+    {rank=same j_1905_Einstein_Brown j_1905_Einstein_Photoeffekt }
 
 
-   j_1965_CMB_entdeckt [
+   j_1907_Perrin [ //_{
+     label = <
+       <table border="1" cellborder="0">
+       <tr><td align="left">1907, Perrin best. Einstein</td></tr>
+       </table>
+     >
+    ];
+
+    j_1827_Brown -> j_1905_Einstein_Brown -> j_1907_Perrin [color="#77aa33"];
+  //_}
+
+   j_1908_Ritz [ //_{
+     label = <
+       <table border="1" cellborder="0">
+       <tr><td align="left">1908, Ritz: <b>Emissionstheorie</b></td></tr>
+       <tr><td align="left">Variable Lichtgeschwindigkeit</td></tr>
+       </table>
+     >
+    ];
+
+  //_}
+
+   j_1925_Michelson_Gale [ //_{
+     label = <
+       <table border="1" cellborder="0">
+       <tr><td align="left">1925, <b>Michelson Gale</b></td></tr>
+       </table>
+     >
+    ]; //_}
+
+   j_1965_CMB_entdeckt [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1965, <b>CMB entdeckt</b> von Penzias und Wilson</td></tr>
        </table>
      >
-   ];
+   ]; //_}
 
-   j_1972_Hafele_Keating [
+   j_1972_Hafele_Keating [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1972, <b>Hafele Keating</b></td></tr>
        </table>
      >
-   ];
+   ]; //_}
 
-
-
-   j_1911_Rutherford [ /*  2016-Mettenheim...pdf */
+   j_1911_Rutherford [ /*  2016-Mettenheim...pdf */ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1911, <b>Rutherford</b></td></tr> 
@@ -692,43 +825,44 @@ digraph A {
        </table>
      >
    ];
-   j_1834_Faraday -> j_1911_Rutherford;
+   j_1834_Faraday -> j_1911_Rutherford; //_}
 
-   j_1931_Hubble [
+   j_1931_Hubble [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1931, <b>Hubble</b></td></tr>
        <tr><td align="left">Veröffentlicht 'Rotverschiebung'</td></tr>
        </table>
      >
-   ];
+   ]; //_}
 
-   j_1985_Allan_et_al [
+   j_1985_Allan_et_al [ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1985, <b>Allen et all</b></td></tr>
        <tr><td align="left">Around the world Relativistic Sagnac Experiment</td></tr>
        </table>
       >
-   ];
+   ]; //_}
 
-   j_1938_Hahn_Strassmann [ /*  2016-Mettenheim...pdf */
+   j_1938_Hahn_Strassmann [ /*  2016-Mettenheim...pdf */ //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1938, <b>Hahn, Strassmann</b></td></tr> 
        <tr><td align="left">Atom nicht unteilbar</td></tr> 
        </table>
      >
-   ];
+   ]; //_}
 
-
-   j_1992_vatikan [ 
+   j_1992_vatikan [  //_{
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1992, Vatikan rehabilitiert Galileo</td></tr> 
        </table>
      >
-   ];
+   ]; //_}
+
+ //_}
   
    j_1887_MM->j_1889_FitzGerald;
 
@@ -762,8 +896,10 @@ digraph A {
    j_1592_De_Motu -> j_1596_Mysterium_Cosmographicum -> j_1604_Kepler -> j_1609_Astronomia_nova -> j_1610_sidereus_nuncius -> j_1612_sonnenflecken -> j_1616_index -> j_1627_Rudolfinische_Tafeln -> j_1633_Inquisition -> j_1643_Torricelli -> j_1647_Pascal ->
    j_1669_Hooke -> j_1670_Roemer -> j_1678_Huygens -> j_1687_Newton -> j_1694_Flamsteed -> j_1704_Newton -> j_1717_Newton -> j_1726_Bradley -> j_1766_Boscovitch -> j_1800_Herschel ->
    j_1801_Ritter -> j_1802_Young -> j_1804_Young -> j_1808_Dalton -> j_1809_Malus ->
-   j_1810_Arago-> j_1817_Fresnel -> j_1818_Fresnel -> j_1834_Faraday -> j_1838_Bessel -> j_1839_Arago -> j_1845_Stokes -> j_1851_Foucault -> j_1868_Hoek -> j_1868_Mendelejew -> j_1870_Maxwell ->
-   j_1871_Airy -> j_1872_Mascart -> j_1887_MM -> j_1889_FitzGerald -> j_1895_Lorentz -> j_1900_Planck -> j_1925_Michelson_Gale -> j_1903_Trouton_Noble -> j_1911_Rutherford -> j_1931_Hubble -> j_1938_Hahn_Strassmann ->
+   j_1810_Arago-> j_1817_Fresnel -> j_1818_Fresnel -> j_1820_Orsted -> j_1827_Brown -> j_1831_Faraday -> j_1834_Faraday -> j_1838_Bessel -> j_1839_Arago -> j_1845_Stokes -> j_1851_Foucault ->
+   j_1864_Maxwell_Electromagnetic_Field -> j_1868_Hoek -> j_1868_Mendelejew -> j_1870_Maxwell -> j_1877_Hertz -> 
+   j_1871_Airy -> j_1872_Mascart -> j_1873_Veltmann -> j_1887_Hertz_Photoeffekt -> j_1887_MM -> j_1889_FitzGerald -> j_1895_Lorentz -> j_1896_Becquerel -> j_1900_Planck -> j_1901_Marconi -> j_1903_Trouton_Noble ->
+   j_1905_Einstein_Photoeffekt -> j_1907_Perrin -> j_1908_Ritz -> j_1911_Rutherford -> j_1925_Michelson_Gale -> j_1931_Hubble -> j_1938_Hahn_Strassmann ->
    j_1965_CMB_entdeckt -> j_1972_Hafele_Keating -> j_1985_Allan_et_al -> j_1992_vatikan
    [style=invisible arrowhead=none];
 
