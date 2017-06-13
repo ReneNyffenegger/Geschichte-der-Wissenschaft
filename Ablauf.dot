@@ -1,3 +1,6 @@
+//
+//  http://renenyffenegger.ch/Wissenschaft/Geschichte/Ablauf.pdf
+//
 digraph A {
 
   node [shape=plaintext];
@@ -20,6 +23,28 @@ digraph A {
    ]; //_}
 
    {rank=same j_Aristoteles j_antike_lichtstrahlen}
+
+   j_Aristarch [ //_{
+     label = <
+       <table border="1" cellborder="0">
+       <tr><td align="left"><b>Aristarch</b> formuliert<br align="left"/>helioz. Weltbild<br align="left"/></td></tr>
+       </table>
+     >
+   ];
+   j_Aristoteles -> j_Aristarch;
+   //_}
+
+   j_Almagest [ //_{
+     label = <
+       <table border="1" cellborder="0">
+       <tr><td align="left"><b>Ptolemäus</b> Almagest</td></tr>
+       </table>
+     >
+   ];
+   j_Aristoteles -> j_Almagest;
+
+   
+   //_}
 
    j_1080_Toledaner_Tafeln [ //_{
      label = <
@@ -86,6 +111,8 @@ digraph A {
        </table>
      >
    ];
+   j_Almagest -> j_1543_De_Revolutionibus;
+   j_Aristarch -> j_1543_De_Revolutionibus;
    j_1513_Middelburg -> j_1543_De_Revolutionibus;
    j_1510_Commentariolus -> j_1543_De_Revolutionibus;
  //_}
@@ -97,6 +124,8 @@ digraph A {
        </table>
      >
    ]; //_}
+
+   j_1543_De_Revolutionibus -> j_1550_Peucer;
 
    j_1551_Prutenische_Tafeln [ //_{
      label = <
@@ -435,8 +464,6 @@ digraph A {
      >
    ]; //_}
 
-   j_antike_lichtstrahlen -> j_1669_Newton -> j_1678_Huygens -> j_1802_Young; /* Natur des Lichts */
-
    j_1804_Young [ //_{
      label = <
        <table border="1" cellborder="0">
@@ -482,8 +509,7 @@ digraph A {
        </table>
      >
    ];
-   j_1800_Herschel -> j_181x_Arago [color=grey];
-   j_1801_Ritter   -> j_181x_Arago [color=grey];
+   j_1800_Herschel -> j_1801_Ritter   -> j_181x_Arago [color=grey];
    j_1810_Arago    -> j_181x_Arago; //_}
 
    j_1817_Fresnel [ //_{
@@ -531,7 +557,10 @@ digraph A {
        <tr><td align="left">Solider Äther bedeutet, dass Materie Äther mitführt.</td></tr>
        </table>
      >
-   ]; //_}
+   ];
+
+   j_1809_Malus -> j_1831_Cauchy;
+   //_}
 
    j_1831_Faraday [ //_{
      label = <
@@ -680,7 +709,22 @@ digraph A {
    ];
    
    //_}
+ //_}
+ //_{ 1880-
 
+   j_1886_Lorentz [ //_{
+     label = <
+       <table border="1" cellborder="0">
+       <tr><td align="left">1886, <b>Lorentz</b></td></tr>
+       <tr><td align="left">Stokes Ätherhypothese widersprüchlich.</td></tr>
+       <tr><td align="left">Fresnels Hypothese bevorzugt.</td></tr>
+       </table>
+     >
+   ];
+   j_1845_Stokes -> j_1886_Lorentz;
+
+   
+   //_}
    j_1887_MM [ //_{
      label = <
        <table border="1" cellborder="0">
@@ -715,6 +759,17 @@ digraph A {
       >
    ]; //_}
 
+   j_1889_Heaviside [ //_{
+     label = <
+       <table border="1" cellborder="0">
+       <tr><td align="left">1889, <b>Heaviside-Ellipsoid</b></td></tr>
+       </table>
+      >
+   ]; //_}
+   {rank=same j_1889_Heaviside j_1889_FitzGerald }
+
+   j_1864_Maxwell_Electromagnetic_Field -> j_1889_Heaviside;
+
    j_1895_Lorentz [ /*  2016-Mettenheim...pdf */ //_{
      label = <
        <table border="1" cellborder="0">
@@ -739,7 +794,7 @@ digraph A {
 
  //_{ 19xx
 
- //_{ 1910-
+ //_{ 1900-
 
    j_1900_Planck [ //_{
      label = <
@@ -770,13 +825,23 @@ digraph A {
      >
    ]; //_}
 
+   j_1904_Lorentz [ //_{
+     label = <
+       <table border="1" cellborder="0">
+       <tr><td align="left">1904, <b>Lorentz</b></td></tr>
+       </table>
+     >
+   ];
+   //_}
+
    j_1905_Einstein_Photoeffekt [ //_{
      label = <
        <table border="1" cellborder="0">
-       <tr><td align="left">1905, Einstein, <b>Photoeffekt Gale</b></td></tr>
+       <tr><td align="left">1905, Einstein, <b>Photoeffekt</b></td></tr>
        </table>
      >
     ];
+    j_antike_lichtstrahlen -> j_1669_Newton -> j_1678_Huygens -> j_1802_Young -> j_1905_Einstein_Photoeffekt [color="#2263b7"]; /* Natur des Lichts */
     j_1887_Hertz_Photoeffekt -> j_1905_Einstein_Photoeffekt;
     
     //_}
@@ -798,6 +863,7 @@ digraph A {
        </table>
      >
     ];
+   j_1887_MM -> j_1889_Heaviside -> j_1889_FitzGerald -> j_1904_Lorentz -> j_1905_Einstein_SRT [color="#23ab71"];
 
     //_}
 
@@ -821,10 +887,14 @@ digraph A {
        <tr><td align="left">Variable Lichtgeschwindigkeit</td></tr>
        </table>
      >
-    ]; //_}
+    ];
+
+    j_1887_MM -> j_1908_Ritz;
+    
+    //_}
 
   //_}
-
+ //_{ 1910-
    j_1911_Rutherford [ /*  2016-Mettenheim...pdf */ //_{
      label = <
        <table border="1" cellborder="0">
@@ -870,7 +940,8 @@ digraph A {
        </table>
      >
     ]; //_}
-
+ //_}
+ //_{ 1930-
    j_1931_Hubble [ //_{
      label = <
        <table border="1" cellborder="0">
@@ -898,6 +969,7 @@ digraph A {
    ]; //_}
 
    j_1905_Einstein_SRT -> j_1913_De_Sitter -> j_1915_Einstein_ART -> j_1919_Sonnenfinsternis -> j_1959_Pound_Rebka [color="#a37a33"]; // Tests der Relativitätstheorie
+ //_}
 
    j_1962_Kantor [ //_{
      label = <
@@ -960,7 +1032,6 @@ digraph A {
 
  //_}
   
-   j_1887_MM->j_1889_FitzGerald;
 
    /* Widerlegungen von Aristoteles */
    j_Aristoteles -> j_1554_Benedetti -> j_1572_Brahe -> j_1577_Brahe -> j_1592_De_Motu ->
@@ -987,7 +1058,7 @@ digraph A {
 
 
 
-   j_Aristoteles -> j_1080_Toledaner_Tafeln -> j_1270_Alfonsinische_Tafeln -> j_1492_Kolumbus -> j_1510_Commentariolus -> j_1513_Middelburg -> j_1517_Reformation -> j_1539_luther -> j_1543_De_Revolutionibus -> j_1550_Peucer -> j_1551_Prutenische_Tafeln -> j_1554_Benedetti -> j_1572_Brahe ->
+   j_Aristoteles -> j_Aristarch -> j_Almagest -> j_1080_Toledaner_Tafeln -> j_1270_Alfonsinische_Tafeln -> j_1492_Kolumbus -> j_1510_Commentariolus -> j_1513_Middelburg -> j_1517_Reformation -> j_1539_luther -> j_1543_De_Revolutionibus -> j_1550_Peucer -> j_1551_Prutenische_Tafeln -> j_1554_Benedetti -> j_1572_Brahe ->
    j_1577_Brahe -> j_1582_Kalenderreform -> j_1587_Reimers -> 
    j_1592_De_Motu -> j_1596_Mysterium_Cosmographicum -> j_1604_Kepler -> j_1609_Astronomia_nova -> j_1610_sidereus_nuncius -> j_1612_sonnenflecken -> j_1616_index -> j_1627_Rudolfinische_Tafeln -> 
    j_1632_galilei_dialogo -> j_1633_Inquisition -> j_1638_galilei_discorsi -> j_1643_Torricelli -> j_1647_Pascal ->
@@ -995,7 +1066,7 @@ digraph A {
    j_1801_Ritter -> j_1802_Young -> j_1804_Young -> j_1808_Dalton -> j_1809_Malus ->
    j_1810_Arago-> j_1817_Fresnel -> j_1818_Fresnel -> j_1820_Orsted -> j_1827_Brown -> j_1831_Faraday -> j_1834_Faraday -> j_1838_Bessel -> j_1839_Arago -> j_1845_Stokes -> j_1851_Foucault ->
    j_1864_Maxwell_Electromagnetic_Field -> j_1868_Hoek -> j_1868_Mendelejew -> j_1870_Maxwell -> j_1877_Hertz -> 
-   j_1871_Airy -> j_1872_Mascart -> j_1873_Veltmann -> j_1887_Hertz_Photoeffekt -> j_1887_MM -> j_1889_FitzGerald -> j_1895_Lorentz -> j_1896_Becquerel -> j_1900_Planck -> j_1901_Marconi -> j_1903_Trouton_Noble ->
+   j_1871_Airy -> j_1872_Mascart -> j_1873_Veltmann -> j_1886_Lorentz ->  j_1887_MM -> j_1889_FitzGerald -> j_1895_Lorentz -> j_1896_Becquerel -> j_1900_Planck -> j_1901_Marconi -> j_1903_Trouton_Noble -> j_1904_Lorentz ->
    j_1905_Einstein_Photoeffekt -> j_1907_Perrin -> j_1908_Ritz -> j_1911_Rutherford -> j_1915_Einstein_ART -> j_1919_Sonnenfinsternis -> j_1925_Michelson_Gale -> j_1931_Hubble -> j_1938_Hahn_Strassmann -> j_1959_Pound_Rebka -> j_1962_Kantor ->
    j_1965_CMB_entdeckt -> j_1972_Hafele_Keating -> j_1974_Marinov -> j_1983_Silvertooth -> j_1985_Allan_et_al -> j_1992_vatikan
    [style=invisible arrowhead=none];
