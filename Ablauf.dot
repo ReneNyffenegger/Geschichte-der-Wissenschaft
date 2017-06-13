@@ -219,6 +219,7 @@ digraph A {
 
  //_{ 16xx
 
+ //_{ 1610-
    j_1604_Kepler [ //_{
      label = <
        <table border="1" cellborder="0">
@@ -265,7 +266,8 @@ digraph A {
    ];
    j_1543_De_Revolutionibus -> j_1616_index;
  //_}
-
+ //_}
+ //_{ 1620-
    j_1627_Rudolfinische_Tafeln [ //_{
      label = <
        <table border="1" cellborder="0">
@@ -304,6 +306,7 @@ digraph A {
    j_1610_sidereus_nuncius  -> j_1632_galilei_dialogo -> j_1638_galilei_discorsi;
    
    //_}
+ //_}
 
    j_1643_Torricelli [ //_{
      label = <
@@ -319,6 +322,15 @@ digraph A {
        <table border="1" cellborder="0">
        <tr><td align="left">1647, <b>Blaise Pascal</b></td></tr>
        <tr><td align="left">Widerlegt Horror Vacui</td></tr>
+       </table>
+     >
+   ]; //_}
+
+   j_1661_Viviani [ //_{
+     label = <
+       <table border="1" cellborder="0">
+       <tr><td align="left">1661, <b>Viviani</b></td></tr>
+       <tr><td align="left">Pendel wie Foucault</td></tr>
        </table>
      >
    ]; //_}
@@ -625,7 +637,10 @@ digraph A {
        <tr><td align="left">1851, <b>Foucault</b></td></tr>
        </table>
      >
-   ]; //_}
+   ];
+   j_1661_Viviani -> j_1851_Foucault;
+   
+   //_}
    {rank=same j_1851_Fizeau j_1851_Foucault}
 
    j_1864_Maxwell_Electromagnetic_Field [ //_{
@@ -1061,7 +1076,7 @@ digraph A {
    j_Aristoteles -> j_Aristarch -> j_Almagest -> j_1080_Toledaner_Tafeln -> j_1270_Alfonsinische_Tafeln -> j_1492_Kolumbus -> j_1510_Commentariolus -> j_1513_Middelburg -> j_1517_Reformation -> j_1539_luther -> j_1543_De_Revolutionibus -> j_1550_Peucer -> j_1551_Prutenische_Tafeln -> j_1554_Benedetti -> j_1572_Brahe ->
    j_1577_Brahe -> j_1582_Kalenderreform -> j_1587_Reimers -> 
    j_1592_De_Motu -> j_1596_Mysterium_Cosmographicum -> j_1604_Kepler -> j_1609_Astronomia_nova -> j_1610_sidereus_nuncius -> j_1612_sonnenflecken -> j_1616_index -> j_1627_Rudolfinische_Tafeln -> 
-   j_1632_galilei_dialogo -> j_1633_Inquisition -> j_1638_galilei_discorsi -> j_1643_Torricelli -> j_1647_Pascal ->
+   j_1632_galilei_dialogo -> j_1633_Inquisition -> j_1638_galilei_discorsi -> j_1643_Torricelli -> j_1647_Pascal -> j_1661_Viviani ->
    j_1669_Hooke -> j_1670_Roemer -> j_1678_Huygens -> j_1687_Newton -> j_1694_Flamsteed -> j_1704_Newton -> j_1717_Newton -> j_1726_Bradley -> j_1766_Boscovitch -> j_1800_Herschel ->
    j_1801_Ritter -> j_1802_Young -> j_1804_Young -> j_1808_Dalton -> j_1809_Malus ->
    j_1810_Arago-> j_1817_Fresnel -> j_1818_Fresnel -> j_1820_Orsted -> j_1827_Brown -> j_1831_Faraday -> j_1834_Faraday -> j_1838_Bessel -> j_1839_Arago -> j_1845_Stokes -> j_1851_Foucault ->
