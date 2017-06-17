@@ -147,14 +147,6 @@ digraph A {
    ]; //_}
 
  //_{ 1572
-   j_1572_Tycho [ //_{
-     label = <
-       <table border="1" cellborder="0">
-       <tr><td align="left">1572, <b>Tycho</b></td></tr>
-       <tr><td align="left">Beobachten einen Kometen: offenbar nicht an Sphären angemacht</td></tr>
-       </table>
-      >
-   ]; //_}
 
    j_1572_Brahe [ //_{
      label = <
@@ -165,17 +157,20 @@ digraph A {
      >
    ]; //_}
 
-   {rank=same j_1572_Tycho j_1572_Brahe}
  //_}
 
    j_1577_Brahe [ //_{
      label = <
        <table border="1" cellborder="0">
-       <tr><td align="left">1577, <b>Tycho Brahe</b></td></tr>
-       <tr><td align="left">Messung von Parallaxe bei Kometen</td></tr>
+       <tr><td align="left">1577, Tycho Brahe, <b>Komet</b></td></tr>
+       <tr><td align="left">Keine Parallaxe bei Kometen<br align="left"/>gemesen. Kometen durchdringen<br align="left"/>angebl. Sphären<br align="left"/></td></tr>
        </table>
      >
-   ]; //_}
+   ];
+
+   j_1572_Brahe -> j_1577_Brahe;
+   
+   //_}
 
    j_1582_Kalenderreform [ //_{
      label = <
@@ -202,7 +197,7 @@ digraph A {
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1588, Tycho: <b>De mundi atherei…</b></td></tr>
-       <tr><td align="left">Tychonisches Weltmodell</td></tr>
+       <tr><td align="left">Tychonisches Weltmodell.<br align="left"/>Komet: ätherisch, nicht atmosphärich<br align="left"/></td></tr>
        </table>
      >
    ];
@@ -309,6 +304,7 @@ digraph A {
      label = <
        <table border="1" cellborder="0">
        <tr><td align="left">1638, Galilei <b>Discorsi</b></td></tr>
+       <tr><td align="left">Erstmals über Fallgesetze</td></tr>
        </table>
      >
    ];
@@ -335,6 +331,15 @@ digraph A {
        <table border="1" cellborder="0">
        <tr><td align="left">1643, <b>Torricelli-Experiment</b></td></tr>
        <tr><td align="left">Ergebnis beginnt neue Debatte<br align="left"/>über <i>Horror Vacui</i><br align="left"/></td></tr>
+       </table>
+     >
+   ]; //_}
+
+   j_1644_Descartes [ //_{
+     label = <
+       <table border="1" cellborder="0">
+       <tr><td align="left">1644, <b>Descartes</b></td></tr>
+       <tr><td align="left">Principia philosophiae</td></tr>
        </table>
      >
    ]; //_}
@@ -1102,7 +1107,7 @@ digraph A {
    j_Aristoteles -> j_Aristarch -> j_Almagest -> j_1080_Toledaner_Tafeln -> j_1270_Alfonsinische_Tafeln -> j_1492_Kolumbus -> j_1510_Commentariolus -> j_1513_Middelburg -> j_1517_Reformation -> j_1539_luther -> j_1543_De_Revolutionibus -> j_1550_Peucer -> j_1551_Prutenische_Tafeln -> j_1554_Benedetti -> j_1572_Brahe ->
    j_1577_Brahe -> j_1582_Kalenderreform -> j_1587_Reimers ->  j_1588_Tycho_De_mundi ->
    j_1592_De_Motu -> j_1596_Mysterium_Cosmographicum -> j_1604_Kepler -> j_1609_Astronomia_nova -> j_1610_sidereus_nuncius -> j_1612_sonnenflecken -> j_1616_index -> j_1627_Rudolfinische_Tafeln -> 
-   j_1632_galilei_dialogo -> j_1633_Inquisition -> j_1638_galilei_discorsi -> j_1639_pieroni -> j_1643_Torricelli -> j_1647_Pascal -> j_1661_Viviani ->
+   j_1632_galilei_dialogo -> j_1633_Inquisition -> j_1638_galilei_discorsi -> j_1639_pieroni -> j_1643_Torricelli -> j_1644_Descartes -> j_1647_Pascal -> j_1661_Viviani ->
    j_1669_Hooke -> j_1670_Roemer -> j_1678_Huygens -> j_1687_Newton -> j_1694_Flamsteed -> j_1704_Newton -> j_1717_Newton -> j_1726_Bradley -> j_1766_Boscovitch -> j_1800_Herschel ->
    j_1801_Ritter -> j_1802_Young -> j_1804_Young -> j_1808_Dalton -> j_1809_Malus ->
    j_1810_Arago-> j_1817_Fresnel -> j_1818_Fresnel -> j_1820_Orsted -> j_1827_Brown -> j_1831_Faraday -> j_1834_Faraday -> j_1838_Bessel -> j_1839_Arago -> j_1845_Stokes -> j_1851_Foucault ->
