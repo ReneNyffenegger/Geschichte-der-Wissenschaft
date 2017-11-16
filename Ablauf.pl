@@ -7,12 +7,23 @@ use GraphViz::Graph;
 
 my $graph = GraphViz::Graph->new('Ablauf-perl');
 
+my $j_Pythagoras = node('<b>Pythagoras</b> (570-510)');
 
-my $j_Aristoteles = $graph->node(); 
-   $j_Aristoteles->label({html=>'
-       <table border="1" cellborder="0">
-       <tr><td align="left">???, <b>Aristoteles</b></td></tr>
-       </table>'});
+my $j_Platon = node('<b>Platon</b> (428-347)', 'Schüler von Sokrates');
+
+my $j_Eudoxos = node('<b>Eudoxos</b> (405-355)', 'Über Geschwindigkeiten', '1. geom.-kinem. Planetenmodell');
+
+my $j_Kallppos = node('<b>Kallippos</b>', 'Erweiterung des Planetenmodells', 'um 7 weitere Sphären');
+
+
+
+my $j_Aristoteles = node('<b>Aristoteles</b> (384-322)');
+#$graph->node(); 
+#
+#   $j_Aristoteles->label({html=>'
+#       <table border="1" cellborder="0">
+#       <tr><td align="left"><b>Aristoteles</b> </td></tr>
+#       </table>'});
 
 my $j_antike_lichtstrahlen = $graph->node(); 
    $j_antike_lichtstrahlen->label({html=>'
@@ -23,6 +34,8 @@ my $j_antike_lichtstrahlen = $graph->node();
 
    $graph->same_rank($j_Aristoteles, $j_antike_lichtstrahlen);
 
+my $j_apollonios_epizykel = node('Apollonios: <b>Epizykeltheorie</b>');
+
 my $j_Aristarch = $graph->node(); 
    $j_Aristarch->label({html=>'
        <table border="1" cellborder="0">
@@ -30,13 +43,16 @@ my $j_Aristarch = $graph->node();
        </table>'});
    $graph->edge($j_Aristoteles, $j_Aristarch);
 
-my $j_Almagest = $graph->node(); 
-   $j_Almagest->label({html=>'
-       <table border="1" cellborder="0">
-       <tr><td align="left"><b>Ptolemäus</b> Almagest</td></tr>
-       </table>'});
-   $graph->edge($j_Aristoteles, $j_Almagest);
+   my $j_Almagest = node('Ptolemäus: <b>Almagest</b>');
+#my $j_Almagest = $graph->node(); 
+#   $j_Almagest->label({html=>'
+#       <table border="1" cellborder="0">
+#       <tr><td align="left"><b>Ptolemäus</b> Almagest</td></tr>
+#       </table>'});
+#  $graph->edge($j_Aristoteles, $j_Almagest);
 
+my @chain = edge_chain($j_Eudoxos, $j_Kallppos, $j_Aristoteles, $j_apollonios_epizykel, $j_Almagest);
+same_attributes('color', '#abcdef', @chain); # Planetenmodell
    
 
 my $j_1080_Toledaner_Tafeln = $graph->node(); 
@@ -218,7 +234,7 @@ my $j_1627_Rudolfinische_Tafeln = $graph->node();
        <tr><td align="left">1627, Kepler: <b>Rudolfinische Tafeln</b></td></tr>
        </table>'});
 
-   my @chain =edge_chain($j_1080_Toledaner_Tafeln, $j_1270_Alfonsinische_Tafeln, $j_1551_Prutenische_Tafeln, $j_1627_Rudolfinische_Tafeln);
+   @chain =edge_chain($j_1080_Toledaner_Tafeln, $j_1270_Alfonsinische_Tafeln, $j_1551_Prutenische_Tafeln, $j_1627_Rudolfinische_Tafeln);
    same_attributes('color', '#33e651', @chain); # Ephemeriden
 
    
@@ -897,6 +913,7 @@ my $j_1992_vatikan = $graph->node();
 
 
    @chain = edge_chain(
+   $j_Pythagoras, $j_Platon, $j_Eudoxos, $j_Kallppos,
    $j_Aristoteles, $j_Aristarch, $j_Almagest, $j_1080_Toledaner_Tafeln, $j_1270_Alfonsinische_Tafeln, $j_1492_Kolumbus, $j_1510_Commentariolus, $j_1513_Middelburg, $j_1517_Reformation, $j_1539_luther, $j_1543_De_Revolutionibus, $j_1550_Peucer, $j_1551_Prutenische_Tafeln, $j_1554_Benedetti, $j_1572_Brahe,
    $j_1577_Brahe, $j_1582_Kalenderreform, $j_1587_Reimers, $j_1588_Tycho_De_mundi,
    $j_1592_De_Motu, $j_1596_Mysterium_Cosmographicum, $j_1604_Kepler, $j_1609_Astronomia_nova, $j_1610_sidereus_nuncius, $j_1612_sonnenflecken, $j_1616_index, $j_1627_Rudolfinische_Tafeln,
@@ -917,6 +934,23 @@ my $j_1992_vatikan = $graph->node();
 
   
 $graph->create('pdf');
+
+sub node {
+
+  my $trs='';
+
+  for my $line (@_) {
+    $trs .= "<tr><td align='left'>$line</td></tr>";
+  }
+
+  my $nd = $graph->node();
+  $nd->label({html=>"<table border='1' cellborder='0'>
+      $trs
+    </table>"});
+
+  return $nd;
+
+}
 
 sub edge_chain {
   my @nodes = @_;
