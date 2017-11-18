@@ -71,6 +71,8 @@ my $j_1270_Alfonsinische_Tafeln = $graph->node();
        <tr><td align="left">1270 <b>Alfonsinische Tafeln</b></td></tr>
        </table>'});
 
+my $j_1472_neue_planetentheorie = node('1472 Peuerbach:', '<b>Theoricae novae Planetarum</b>');
+
 my $j_1492_Kolumbus = $graph->node(); 
    $j_1492_Kolumbus->label({html=>'
        <table border="1" cellborder="0">
@@ -109,6 +111,7 @@ my $j_1543_De_Revolutionibus = $graph->node();
        <tr><td align="left">1543, <b>De Revolutionibus</b></td></tr>
        </table>'});
 
+   $graph->edge($j_1472_neue_planetentheorie, $j_1543_De_Revolutionibus);
    $graph->edge($j_Almagest, $j_1543_De_Revolutionibus);
    $graph->edge($j_Aristarch, $j_1543_De_Revolutionibus);
    $graph->edge($j_1513_Middelburg, $j_1543_De_Revolutionibus);
@@ -918,7 +921,8 @@ my $j_1992_vatikan = $graph->node();
 
    @chain = edge_chain(
    $j_Pythagoras, $j_Platon, $j_Eudoxos, $j_Kallppos,
-   $j_Aristoteles, $j_Aristarch, $j_apollonios_epizykel, $j_Almagest, $j_1080_Toledaner_Tafeln, $j_1270_Alfonsinische_Tafeln, $j_1492_Kolumbus, $j_1510_Commentariolus, $j_1513_Middelburg, $j_1517_Reformation, $j_1539_luther, $j_1543_De_Revolutionibus, $j_1550_Peucer, $j_1551_Prutenische_Tafeln, $j_1554_Benedetti, $j_1572_Brahe,
+   $j_Aristoteles, $j_Aristarch, $j_apollonios_epizykel, $j_Almagest, $j_1080_Toledaner_Tafeln, $j_1270_Alfonsinische_Tafeln, $j_1472_neue_planetentheorie,
+   $j_1492_Kolumbus, $j_1510_Commentariolus, $j_1513_Middelburg, $j_1517_Reformation, $j_1539_luther, $j_1543_De_Revolutionibus, $j_1550_Peucer, $j_1551_Prutenische_Tafeln, $j_1554_Benedetti, $j_1572_Brahe,
    $j_1577_Brahe, $j_1582_Kalenderreform, $j_1587_Reimers, $j_1588_Tycho_De_mundi,
    $j_1592_De_Motu, $j_1596_Mysterium_Cosmographicum, $j_1604_Kepler, $j_1609_Astronomia_nova, $j_1610_sidereus_nuncius, $j_1612_sonnenflecken, $j_1616_index, $j_1627_Rudolfinische_Tafeln,
    $j_1632_galilei_dialogo, $j_1633_Inquisition, $j_1638_galilei_discorsi, $j_1639_pieroni, $j_1643_Torricelli, $j_1644_Descartes, $j_1647_Pascal, $j_1661_Viviani,
