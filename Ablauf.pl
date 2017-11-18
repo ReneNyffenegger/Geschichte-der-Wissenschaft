@@ -11,7 +11,7 @@ my $j_Pythagoras = node('<b>Pythagoras</b> (570-510)');
 
 my $j_Platon = node('<b>Platon</b> (428-347)', 'Schüler von Sokrates');
 
-my $j_Eudoxos = node('<b>Eudoxos</b> (405-355)', 'Über Geschwindigkeiten', '1. geom.-kinem. Planetenmodell');
+my $j_Eudoxos = node('<b>Eudoxos</b> (405-355)', 'Über Geschwindigkeiten', '<b>Homozentr. Modell</b>:', '1. geom.-kinem. Planetenmodell');
 
 my $j_Kallppos = node('<b>Kallippos</b>', 'Erweiterung des Planetenmodells', 'um 7 weitere Sphären');
 
@@ -34,16 +34,20 @@ my $j_antike_lichtstrahlen = $graph->node();
 
    $graph->same_rank($j_Aristoteles, $j_antike_lichtstrahlen);
 
-my $j_apollonios_epizykel = node('Apollonios: <b>Epizykeltheorie</b>');
+my $j_apollonios_epizykel = node('Apollonios (265-190): <b>Epizykeltheorie</b>');
 
-my $j_Aristarch = $graph->node(); 
-   $j_Aristarch->label({html=>'
-       <table border="1" cellborder="0">
-       <tr><td align="left"><b>Aristarch</b> formuliert<br align="left"/>helioz. Weltbild<br align="left"/></td></tr>
-       </table>'});
+my $j_hipparchos_exzenter = node('Hipparchos (190-120): <b>Exzenter</b>');
+
+my $j_Aristarch = node('Aristarch (310-230) formuliert', 'erstes <b>heliozentr.</b> Welbild');
+
+#my $j_Aristarch = $graph->node(); 
+#   $j_Aristarch->label({html=>'
+#       <table border="1" cellborder="0">
+#       <tr><td align="left"><b>Aristarch</b> formuliert<br align="left"/>helioz. Weltbild<br align="left"/></td></tr>
+#       </table>'});
    $graph->edge($j_Aristoteles, $j_Aristarch);
 
-   my $j_Almagest = node('Ptolemäus: <b>Almagest</b>');
+   my $j_Almagest = node('Ptolemäus: <b>Almagest</b>', 'und <b>Äquant</b>');
 #my $j_Almagest = $graph->node(); 
 #   $j_Almagest->label({html=>'
 #       <table border="1" cellborder="0">
@@ -51,7 +55,7 @@ my $j_Aristarch = $graph->node();
 #       </table>'});
 #  $graph->edge($j_Aristoteles, $j_Almagest);
 
-my @chain = edge_chain($j_Eudoxos, $j_Kallppos, $j_Aristoteles, $j_apollonios_epizykel, $j_Almagest);
+my @chain = edge_chain($j_Eudoxos, $j_Kallppos, $j_Aristoteles, $j_apollonios_epizykel, $j_hipparchos_exzenter, $j_Almagest);
 same_attributes('color', '#abcdef', @chain); # Planetenmodell
    
 
@@ -914,7 +918,7 @@ my $j_1992_vatikan = $graph->node();
 
    @chain = edge_chain(
    $j_Pythagoras, $j_Platon, $j_Eudoxos, $j_Kallppos,
-   $j_Aristoteles, $j_Aristarch, $j_Almagest, $j_1080_Toledaner_Tafeln, $j_1270_Alfonsinische_Tafeln, $j_1492_Kolumbus, $j_1510_Commentariolus, $j_1513_Middelburg, $j_1517_Reformation, $j_1539_luther, $j_1543_De_Revolutionibus, $j_1550_Peucer, $j_1551_Prutenische_Tafeln, $j_1554_Benedetti, $j_1572_Brahe,
+   $j_Aristoteles, $j_Aristarch, $j_apollonios_epizykel, $j_Almagest, $j_1080_Toledaner_Tafeln, $j_1270_Alfonsinische_Tafeln, $j_1492_Kolumbus, $j_1510_Commentariolus, $j_1513_Middelburg, $j_1517_Reformation, $j_1539_luther, $j_1543_De_Revolutionibus, $j_1550_Peucer, $j_1551_Prutenische_Tafeln, $j_1554_Benedetti, $j_1572_Brahe,
    $j_1577_Brahe, $j_1582_Kalenderreform, $j_1587_Reimers, $j_1588_Tycho_De_mundi,
    $j_1592_De_Motu, $j_1596_Mysterium_Cosmographicum, $j_1604_Kepler, $j_1609_Astronomia_nova, $j_1610_sidereus_nuncius, $j_1612_sonnenflecken, $j_1616_index, $j_1627_Rudolfinische_Tafeln,
    $j_1632_galilei_dialogo, $j_1633_Inquisition, $j_1638_galilei_discorsi, $j_1639_pieroni, $j_1643_Torricelli, $j_1644_Descartes, $j_1647_Pascal, $j_1661_Viviani,
