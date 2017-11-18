@@ -51,13 +51,15 @@ my $j_1080_Toledaner_Tafeln = $graph->node();
        <tr><td align="left">1080 <b>Toledaner Tafeln</b></td></tr>
        </table>'});
 
-my $j_1230_tractatus_sphaera = node('Sacrobosco: <b>Tractatus de Sphaera</b>');
+my $j_1230_tractatus_sphaera = node('Sacrobosco (1230):', '<b>Tractatus de Sphaera</b>');
 
 my $j_1270_Alfonsinische_Tafeln = $graph->node(); 
    $j_1270_Alfonsinische_Tafeln->label({html=>'
        <table border="1" cellborder="0">
        <tr><td align="left">1270 <b>Alfonsinische Tafeln</b></td></tr>
        </table>'});
+
+my $j_cusanus = node('Cusanus (1401-1464)', 'Bruch mit geoz. Weltbild');
 
 my $j_1472_neue_planetentheorie = node('1472 Peuerbach:', '<b>Theoricae novae Planetarum</b>');
 
@@ -127,6 +129,9 @@ my $j_1554_Benedetti = $graph->node();
        <tr><td align="left">Widerlegung von Aristoteles »Fallgeschwindigkeit«</td></tr>
        </table>'});
 
+my $j_giordano_bruno = node('Giordano Bruno');
+   $graph->edge($j_cusanus, $j_giordano_bruno);
+
  # _{ 1572
 
 my $j_1572_Brahe = $graph->node(); 
@@ -144,7 +149,6 @@ my $j_1577_Brahe = $graph->node();
        <tr><td align="left">Keine Parallaxe bei Kometen<br align="left"/>gemesen. Kometen durchdringen<br align="left"/>angebl. Sphären<br align="left"/></td></tr>
        </table>'});
 
-   $graph->edge($j_1572_Brahe, $j_1577_Brahe);
  # _}
    
 
@@ -604,7 +608,7 @@ my $j_1873_Veltmann = $graph->node();
        <tr><td align="left">zeigt, dass fresn. Mitf. Koeff. falsch ist</td></tr>
        <tr><td align="left">Vgl Mascart (1875)</td></tr>
        </table>'});
-   $graph->edge($j_1818_Fresnel, $j_1873_Veltmann); # _}
+   $graph->edge($j_1818_Fresnel, $j_1873_Veltmann);
 
 my $j_1877_Hertz = $graph->node(); 
    $j_1877_Hertz->label({html=>'
@@ -612,6 +616,7 @@ my $j_1877_Hertz = $graph->node();
        <tr><td align="left">1877, Hertz demonstriert <b>elektr. Wellen</b></td></tr>
        </table>'});
    
+ # _}
  # _{ 1880-
 
 my $j_1886_Lorentz = $graph->node(); 
@@ -624,7 +629,7 @@ my $j_1886_Lorentz = $graph->node();
    $graph->edge($j_1845_Stokes, $j_1886_Lorentz);
 
    
-   # _}
+
 my $j_1887_MM = $graph->node(); 
    $j_1887_MM->label({html=>'
        <table border="1" cellborder="0">
@@ -635,7 +640,7 @@ my $j_1887_MM = $graph->node();
 
    $graph->edge($j_1864_Maxwell_Electromagnetic_Field , $j_1887_MM);
    
-   # _}
+
 
 my $j_1887_Hertz_Photoeffekt = $graph->node(); 
    $j_1887_Hertz_Photoeffekt->label({html=>'
@@ -669,7 +674,7 @@ my  $j_1895_Lorentz = $graph->node(); #  2016-Mettenheim...pdf
        <tr><td align="left">Theorie des Elektrons</td></tr> 
        </table>'});
    $graph->edge($j_1834_Faraday , $j_1895_Lorentz);
-   # _}
+
 
 my $j_1896_Becquerel = $graph->node(); 
    $j_1896_Becquerel->label({html=>'
@@ -793,7 +798,6 @@ my $j_1915_Einstein_ART = $graph->node();
 
     $graph->edge($j_1905_Einstein_SRT, $j_1915_Einstein_ART);
 
- # _}
 
 my $j_1919_Sonnenfinsternis = $graph->node(); 
    $j_1919_Sonnenfinsternis->label({html=>'
@@ -909,8 +913,11 @@ my $j_1992_vatikan = $graph->node();
 
    @chain = edge_chain(
    $j_Pythagoras, $j_Platon, $j_Eudoxos, $j_Kallppos,
-   $j_Aristoteles, $j_Aristarch, $j_archimedes_sandrechnung, $j_apollonios_epizykel, $j_hipparchos_exzenter, $j_Almagest, $j_1080_Toledaner_Tafeln, $j_1230_tractatus_sphaera, $j_1270_Alfonsinische_Tafeln, $j_1472_neue_planetentheorie,
-   $j_1492_Kolumbus, $j_1510_Commentariolus, $j_1513_Middelburg, $j_1517_Reformation, $j_1539_luther, $j_1543_De_Revolutionibus, $j_1550_Peucer, $j_1551_Prutenische_Tafeln, $j_1554_Benedetti, $j_1572_Brahe,
+   $j_Aristoteles, $j_Aristarch, $j_archimedes_sandrechnung, $j_apollonios_epizykel, $j_hipparchos_exzenter, $j_Almagest, $j_1080_Toledaner_Tafeln, $j_1230_tractatus_sphaera,
+   $j_1270_Alfonsinische_Tafeln,
+   $j_cusanus, $j_1472_neue_planetentheorie,
+   $j_1492_Kolumbus, $j_1510_Commentariolus, $j_1513_Middelburg, $j_1517_Reformation, $j_1539_luther, $j_1543_De_Revolutionibus, $j_1550_Peucer, $j_1551_Prutenische_Tafeln,
+   $j_1554_Benedetti, $j_giordano_bruno,  $j_1572_Brahe,
    $j_1577_Brahe, $j_1582_Kalenderreform, $j_1587_Reimers, $j_1588_Tycho_De_mundi,
    $j_1592_De_Motu, $j_1596_Mysterium_Cosmographicum, $j_1604_Kepler, $j_1609_Astronomia_nova, $j_1610_sidereus_nuncius, $j_1612_sonnenflecken, $j_1616_index, $j_1627_Rudolfinische_Tafeln,
    $j_1632_galilei_dialogo, $j_1633_Inquisition, $j_1638_galilei_discorsi, $j_1639_pieroni, $j_1643_Torricelli, $j_1644_Descartes, $j_1647_Pascal, $j_1661_Viviani,
