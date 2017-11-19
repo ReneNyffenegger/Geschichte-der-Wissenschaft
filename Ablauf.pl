@@ -115,11 +115,12 @@ my $j_1550_Peucer = $graph->node();
 
    $graph->edge($j_1543_De_Revolutionibus, $j_1550_Peucer);
 
-my $j_1551_Prutenische_Tafeln = $graph->node(); 
-   $j_1551_Prutenische_Tafeln->label({html=>'
-       <table border="1" cellborder="0">
-       <tr><td align="left">1551, <b>Prutenische Tafeln</b></td></tr>
-       </table>'});
+my $j_1551_Prutenische_Tafeln = node('1551 <b>Prutenische Tafeln</b>', 'Verbreitung d. kopern. Systems');
+#my $j_1551_Prutenische_Tafeln = $graph->node(); 
+#   $j_1551_Prutenische_Tafeln->label({html=>'
+#       <table border="1" cellborder="0">
+#       <tr><td align="left">1551, <b>Prutenische Tafeln</b></td></tr>
+#       </table>'});
    $graph->edge($j_1543_De_Revolutionibus, $j_1551_Prutenische_Tafeln);
 
 my $j_1554_Benedetti = $graph->node(); 
@@ -151,7 +152,7 @@ my $j_1577_Brahe = $graph->node();
 
  # _}
    
-
+ #_{ 1580 -
 my $j_1582_Kalenderreform = $graph->node(); 
    $j_1582_Kalenderreform->label({html=>'
        <table border="1" cellborder="0">
@@ -186,7 +187,7 @@ my $j_1596_Mysterium_Cosmographicum = $graph->node();
        <table border="1" cellborder="0">
        <tr><td align="left">1596, Kepler, <b>Mysterium Cosmographicum</b></td></tr>
        </table>'});
-
+ #_}
  # _}
 
  # _{ 16xx
@@ -227,11 +228,11 @@ my $j_1616_index = $graph->node();
    $graph->edge($j_1543_De_Revolutionibus , $j_1616_index);
  # _}
  # _{ 1620-
-my $j_1627_Rudolfinische_Tafeln = $graph->node(); 
-   $j_1627_Rudolfinische_Tafeln->label({html=>'
-       <table border="1" cellborder="0">
-       <tr><td align="left">1627, Kepler: <b>Rudolfinische Tafeln</b></td></tr>
-       </table>'});
+my $j_1627_Rudolfinische_Tafeln = node('1627, Kepler:', '<b>Rudolfinische Tafeln'); 
+#  $j_1627_Rudolfinische_Tafeln->label({html=>'
+#      <table border="1" cellborder="0">
+#      <tr><td align="left">1627, Kepler: <b>Rudolfinische Tafeln</b></td></tr>
+#      </table>'});
 
    @chain =edge_chain($j_1080_Toledaner_Tafeln, $j_1270_Alfonsinische_Tafeln, $j_1551_Prutenische_Tafeln, $j_1627_Rudolfinische_Tafeln);
    same_attributes('color', '#33e651', @chain); # Ephemeriden
@@ -270,7 +271,7 @@ my $j_1639_pieroni = $graph->node();
 
    
  # _}
-
+ #_{ 1640 -
 my $j_1643_Torricelli = $graph->node(); 
    $j_1643_Torricelli->label({html=>'
        <table border="1" cellborder="0">
@@ -299,7 +300,7 @@ my $j_1661_Viviani = $graph->node();
        <tr><td align="left">Pendel wie Foucault</td></tr>
        </table>'});
 
-   # _{ 1699
+   # _{ 1669
 my $j_1669_Hooke = $graph->node(); 
    $j_1669_Hooke->label({html=>'
        <table border="1" cellborder="0">
@@ -323,7 +324,8 @@ my $j_1669_Newton = $graph->node();
    $graph->same_rank($j_1669_Hooke, $j_1669_Newton, $j_1669_Bartholin);
 #  {rank=same j_1669_Hooke j_1669_Newton j_1669_Bartholin}
  # _}
-
+ #_}
+ #_{ 1670 -
 my $j_1670_Roemer = $graph->node(); 
    $j_1670_Roemer->label({html=>'
        <table border="1" cellborder="0">
@@ -359,7 +361,7 @@ my $j_1694_Flamsteed = $graph->node();
        <tr><td align="left">1694, <b>Flamsteed</b></td></tr>
        <tr><td align="left">Macht am Polarstern<br align="left"/>die gleiche Beobachtung wie Hooke<br align="left"/></td></tr>
        </table>'});
-
+ #_}
  # _}
 
  # _{ 17xx
