@@ -7,6 +7,7 @@ use GraphViz::Graph;
 
 my $graph = GraphViz::Graph->new('Ablauf-perl');
 
+ #_{ Antike
 my $j_Pythagoras = node('<b>Pythagoras</b> (570-510)');
 
 my $j_Platon = node('<b>Platon</b> (428-347)', 'Schüler von Sokrates');
@@ -44,6 +45,7 @@ same_attributes('color', '#abcdef', @chain); # Planetenmodell
    
 my $j_archimedes_sandrechnung = node('Archimedes (287-212):', '<b>Sandrechnung</b> zitert', 'Aristarch');
    $graph->edge($j_Aristarch, $j_archimedes_sandrechnung);
+ #_}
 
 my $j_1080_Toledaner_Tafeln = $graph->node(); 
    $j_1080_Toledaner_Tafeln->label({html=>'
@@ -51,6 +53,7 @@ my $j_1080_Toledaner_Tafeln = $graph->node();
        <tr><td align="left">1080 <b>Toledaner Tafeln</b></td></tr>
        </table>'});
 
+ # _{ 12xx
 my $j_1230_tractatus_sphaera = node('Sacrobosco (1230):', '<b>Tractatus de Sphaera</b>');
 
 my $j_1270_Alfonsinische_Tafeln = $graph->node(); 
@@ -58,7 +61,9 @@ my $j_1270_Alfonsinische_Tafeln = $graph->node();
        <table border="1" cellborder="0">
        <tr><td align="left">1270 <b>Alfonsinische Tafeln</b></td></tr>
        </table>'});
+ #_}
 
+ # _{ 14xx
 my $j_cusanus = node('Cusanus (1401-1464)', 'Bruch mit geoz. Weltbild');
 
 my $j_1472_neue_planetentheorie = node('1472 Peuerbach:', '<b>Theoricae novae Planetarum</b>');
@@ -68,9 +73,10 @@ my $j_1492_Kolumbus = $graph->node();
        <table border="1" cellborder="0">
        <tr><td align="left">1492, <b>Kolumbus</b> entdeckt(?) Amerika</td></tr>
        </table>'});
+ #_}
 
  # _{ 15xx
-
+ #_{ 1510 -
 my $j_1510_Commentariolus = $graph->node(); 
    $j_1510_Commentariolus->label({html=>'
        <table border="1" cellborder="0">
@@ -89,6 +95,8 @@ my $j_1517_Reformation = $graph->node();
        <tr><td align="left">1517, <b>Reformation</b></td></tr>
        </table>'});
 
+ #_}
+ #_{ 1530 -
 my $j_1539_luther = $graph->node(); 
    $j_1539_luther->label({html=>'
        <table border="1" cellborder="0">
@@ -133,6 +141,9 @@ my $j_1554_Benedetti = $graph->node();
 my $j_giordano_bruno = node('Giordano Bruno');
    $graph->edge($j_cusanus, $j_giordano_bruno);
 
+my $j_1563_tafeln_falsch=node('1563: Brahe findet:', 'Alfons. u. prut. Tafeln falsch');
+   $graph->edge($j_1551_Prutenische_Tafeln, $j_1563_tafeln_falsch);
+
  # _{ 1572
 
 my $j_1572_Brahe = $graph->node(); 
@@ -151,7 +162,7 @@ my $j_1577_Brahe = $graph->node();
        </table>'});
 
  # _}
-   
+    #_}
  #_{ 1580 -
 my $j_1582_Kalenderreform = $graph->node(); 
    $j_1582_Kalenderreform->label({html=>'
@@ -228,7 +239,7 @@ my $j_1616_index = $graph->node();
    $graph->edge($j_1543_De_Revolutionibus , $j_1616_index);
  # _}
  # _{ 1620-
-my $j_1627_Rudolfinische_Tafeln = node('1627, Kepler:', '<b>Rudolfinische Tafeln'); 
+my $j_1627_Rudolfinische_Tafeln = node('1627, Kepler:', '<b>Rudolfinische Tafeln</b>'); 
 #  $j_1627_Rudolfinische_Tafeln->label({html=>'
 #      <table border="1" cellborder="0">
 #      <tr><td align="left">1627, Kepler: <b>Rudolfinische Tafeln</b></td></tr>
@@ -919,7 +930,7 @@ my $j_1992_vatikan = $graph->node();
    $j_1270_Alfonsinische_Tafeln,
    $j_cusanus, $j_1472_neue_planetentheorie,
    $j_1492_Kolumbus, $j_1510_Commentariolus, $j_1513_Middelburg, $j_1517_Reformation, $j_1539_luther, $j_1543_De_Revolutionibus, $j_1550_Peucer, $j_1551_Prutenische_Tafeln,
-   $j_1554_Benedetti, $j_giordano_bruno,  $j_1572_Brahe,
+   $j_1554_Benedetti, $j_giordano_bruno,  $j_1563_tafeln_falsch, $j_1572_Brahe,
    $j_1577_Brahe, $j_1582_Kalenderreform, $j_1587_Reimers, $j_1588_Tycho_De_mundi,
    $j_1592_De_Motu, $j_1596_Mysterium_Cosmographicum, $j_1604_Kepler, $j_1609_Astronomia_nova, $j_1610_sidereus_nuncius, $j_1612_sonnenflecken, $j_1616_index, $j_1627_Rudolfinische_Tafeln,
    $j_1632_galilei_dialogo, $j_1633_Inquisition, $j_1638_galilei_discorsi, $j_1639_pieroni, $j_1643_Torricelli, $j_1644_Descartes, $j_1647_Pascal, $j_1661_Viviani,
