@@ -1,4 +1,7 @@
 #!/usr/bin/perl
+#
+#   http://renenyffenegger.ch/Wissenschaft/Geschichte/
+#
 use warnings;
 use strict;
 use utf8;
@@ -353,12 +356,7 @@ my $j_1678_Huygens = $graph->node();
        <tr><td align="left">Wellentheorie</td></tr>
        </table>'});
 
-my $j_1687_Newton = $graph->node(); 
-   $j_1687_Newton->label({html=>'
-       <table border="1" cellborder="0">
-       <tr><td align="left">1687, Newton: <b>Principia Mathematica</b></td></tr>
-       <tr><td align="left">u.a. Gravitationsgesetz</td></tr>
-       </table>'});
+my $j_1687_Newton = node('1687, Newton: <b>Principia Mathematica</b>', 'Gravitations- und', 'drei Bewegungsgesetze');
    
 my $newton_formeln = $graph->edge($j_1609_Astronomia_nova, $j_1687_Newton);
    $newton_formeln->label({text=>'Newton liefert Formeln'});
