@@ -206,7 +206,7 @@ my $j_1596_Mysterium_Cosmographicum = $graph->node();
 
  # _{ 16xx
 
- # _{ 1610-
+ # _{ 1600-1619
 my $j_1604_Kepler = $graph->node(); 
    $j_1604_Kepler->label({html=>'
        <table border="1" cellborder="0">
@@ -221,6 +221,10 @@ my $j_1609_Astronomia_nova = $graph->node();
        <tr><td align="left">1609, Kepler, <b>Astronomia nova</b></td></tr>
        </table>'});
    $graph->edge($j_1596_Mysterium_Cosmographicum , $j_1609_Astronomia_nova);
+
+my $j_1609_david_fabricius = node('David Fabricius entdeckt <b>Mira</b>');
+
+$graph->same_rank($j_1609_Astronomia_nova, $j_1609_david_fabricius);
 
 my $j_1610_sidereus_nuncius = $graph->node(); 
    $j_1610_sidereus_nuncius->label({html=>'
@@ -241,7 +245,7 @@ my $j_1616_index = $graph->node();
        </table>'});
    $graph->edge($j_1543_De_Revolutionibus , $j_1616_index);
  # _}
- # _{ 1620-
+ # _{ 1620-1639
 my $j_1627_Rudolfinische_Tafeln = node('1627, Kepler:', '<b>Rudolfinische Tafeln</b>'); 
 #  $j_1627_Rudolfinische_Tafeln->label({html=>'
 #      <table border="1" cellborder="0">
@@ -272,6 +276,10 @@ my $j_1638_galilei_discorsi = $graph->node();
        <tr><td align="left">1638, Galilei <b>Discorsi</b></td></tr>
        <tr><td align="left">Erstmals über Fallgesetze</td></tr>
        </table>'});
+
+my $j_1638_johannes_hevelius = node ('1638: Joh. Hevelius:', 'Mira pulsiert');
+
+$graph -> same_rank($j_1638_johannes_hevelius, $j_1638_galilei_discorsi);
 
    edge_chain($j_1610_sidereus_nuncius, $j_1632_galilei_dialogo, $j_1638_galilei_discorsi);
 #  j_1610_sidereus_nuncius  -> j_1632_galilei_dialogo -> j_1638_galilei_discorsi;
@@ -406,16 +414,20 @@ my $j_1766_Boscovitch = $graph->node();
        <tr><td align="left">Schlägt Experiment mit Wasser<br align="left"/>gefülltem Teleskop vor.<br align="left"/></td></tr>
        </table>'});
 
+my $j_1784_Goodricke = node('1784: John Goodricke:', 'Perioden in Delta Cephei');
+
+
+
+ # _{ 18xx
+ # _{ 1800-
+
 my $j_1800_Herschel = $graph->node(); 
    $j_1800_Herschel->label({html=>'
        <table border="1" cellborder="0">
        <tr><td align="left">1800, <b>Herschel</b></td></tr>
        <tr><td align="left">entdeckt infrarotes Licht.</td></tr>
        </table>'});
- # _}
 
- # _{ 18xx
- # _{ 1800-
 my $j_1801_Ritter = $graph->node(); 
    $j_1801_Ritter->label({html=>'
        <table border="1" cellborder="0">
@@ -522,13 +534,8 @@ my $j_1834_Faraday = $graph->node(); # 2016-Mettenheim...pdf
        <tr><td align="left">Elektrolyse</td></tr> 
        </table>'});
 
-my $j_1838_Bessel = $graph->node(); 
-   $j_1838_Bessel->label({html=>'
-       <table border="1" cellborder="0">
-       <tr><td align="left">1838, <b>Bessel</b></td></tr>
-       <tr><td align="left">Entdeckung der Parallaxe.</td></tr>
-       </table>'});
-   $graph->edge($j_1639_pieroni , $j_1838_Bessel);
+my $j_1838_Bessel = node('1838: Bessel: erstmalige', 'Bestimmung Distanz zu Stern', 'mit <b>Parallaxe</b>');
+   $graph->edge($j_1639_pieroni, $j_1838_Bessel);
 
 my $j_1839_Arago = $graph->node(); 
    $j_1839_Arago->label({html=>'
@@ -717,7 +724,7 @@ my $j_1901_Marconi = $graph->node();
    
    @chain = edge_chain($j_1820_Orsted, $j_1831_Faraday, $j_1864_Maxwell_Electromagnetic_Field, $j_1877_Hertz, $j_1901_Marconi);
    same_attributes('color', '#5533b7', @chain);
- # _}
+
 
 my $j_1903_Trouton_Noble = $graph->node(); 
    $j_1903_Trouton_Noble->label({html=>'
@@ -730,7 +737,6 @@ my $j_1904_Lorentz = $graph->node();
        <table border="1" cellborder="0">
        <tr><td align="left">1904, <b>Lorentz</b></td></tr>
        </table>'});
-   # _}
 
 my $j_1905_Einstein_Photoeffekt = $graph->node(); 
    $j_1905_Einstein_Photoeffekt->label({html=>'
@@ -759,7 +765,7 @@ my $j_1905_Einstein_SRT = $graph->node();
    @chain=edge_chain($j_1887_MM, $j_1889_Heaviside, $j_1889_FitzGerald, $j_1904_Lorentz, $j_1905_Einstein_SRT);
    same_attributes('color', "#23ab71");
 
-    # _}
+
 
     $graph->same_rank($j_1905_Einstein_Brown, $j_1905_Einstein_Photoeffekt, $j_1905_Einstein_SRT);
 
@@ -782,7 +788,12 @@ my $j_1908_Ritz = $graph->node();
 
     $graph->edge($j_1887_MM , $j_1908_Ritz);
     
-    # _}
+
+my $j_1908_Leavitt = node('1908 Leavitt:', '<b>1777 Variables in the Magellanic Cloud</b>');
+   $graph->same_rank($j_1908_Leavitt, $j_1908_Ritz);
+
+   
+
 
   # _}
  # _{ 1910-
@@ -815,6 +826,15 @@ my $j_1919_Sonnenfinsternis = $graph->node();
        <table border="1" cellborder="0">
        <tr><td align="left">1919, Sonnenfinsternis</td></tr>
        </table>'});
+
+my $j_1924_Hubble_Cepheides = node('1924: Hubble bestimmt', 'Distanz zu Andromeda', 'mit Cepheiden');
+
+
+#
+#
+# 
+@chain = edge_chain($j_1609_david_fabricius, $j_1638_johannes_hevelius, $j_1784_Goodricke, $j_1838_Bessel, $j_1908_Leavitt, $j_1924_Hubble_Cepheides);
+same_attributes('color', "#5329ab", @chain);
 
 my $j_1925_Michelson_Gale = $graph->node(); 
    $j_1925_Michelson_Gale->label({html=>'
@@ -930,14 +950,15 @@ my $j_1992_vatikan = $graph->node();
    $j_1492_Kolumbus, $j_1510_Commentariolus, $j_1513_Middelburg, $j_1517_Reformation, $j_1539_luther, $j_1543_De_Revolutionibus, $j_1550_Peucer, $j_1551_Prutenische_Tafeln,
    $j_1554_Benedetti, $j_giordano_bruno,  $j_1563_tafeln_falsch, $j_1572_Brahe,
    $j_1577_Brahe, $j_1582_Kalenderreform, $j_1587_Reimers, $j_1588_Tycho_De_mundi,
-   $j_1592_De_Motu, $j_1596_Mysterium_Cosmographicum, $j_1604_Kepler, $j_1609_Astronomia_nova, $j_1610_sidereus_nuncius, $j_1612_sonnenflecken, $j_1616_index, $j_1627_Rudolfinische_Tafeln,
-   $j_1632_galilei_dialogo, $j_1633_Inquisition, $j_1638_galilei_discorsi, $j_1639_pieroni, $j_1643_Torricelli, $j_1644_Descartes, $j_1647_Pascal, $j_1661_Viviani,
-   $j_1669_Hooke, $j_1670_Roemer, $j_1678_Huygens, $j_1687_Newton, $j_1694_Flamsteed, $j_1704_Newton, $j_1717_Newton, $j_1726_Bradley, $j_1766_Boscovitch, $j_1800_Herschel,
+   $j_1592_De_Motu, $j_1596_Mysterium_Cosmographicum, $j_1604_Kepler, $j_1609_david_fabricius, $j_1609_Astronomia_nova, $j_1610_sidereus_nuncius, $j_1612_sonnenflecken, $j_1616_index, $j_1627_Rudolfinische_Tafeln,
+   $j_1632_galilei_dialogo, $j_1633_Inquisition, $j_1638_johannes_hevelius, $j_1638_galilei_discorsi, $j_1639_pieroni, $j_1643_Torricelli, $j_1644_Descartes, $j_1647_Pascal, $j_1661_Viviani,
+   $j_1669_Hooke, $j_1670_Roemer, $j_1678_Huygens, $j_1687_Newton, $j_1694_Flamsteed, $j_1704_Newton, $j_1717_Newton, $j_1726_Bradley, $j_1766_Boscovitch, $j_1784_Goodricke, $j_1800_Herschel,
    $j_1801_Ritter, $j_1802_Young, $j_1804_Young, $j_1808_Dalton, $j_1809_Malus,
    $j_1810_Arago, $j_1817_Fresnel, $j_1818_Fresnel, $j_1820_Orsted, $j_1827_Brown, $j_1831_Faraday, $j_1834_Faraday, $j_1838_Bessel, $j_1839_Arago, $j_1845_Stokes, $j_1851_Foucault,
    $j_1864_Maxwell_Electromagnetic_Field, $j_1868_Hoek, $j_1868_Mendelejew, $j_1870_Maxwell, $j_1877_Hertz,
    $j_1871_Airy, $j_1872_Mascart, $j_1873_Veltmann, $j_1886_Lorentz, $j_1887_MM, $j_1889_FitzGerald, $j_1895_Lorentz, $j_1896_Becquerel, $j_1900_Planck, $j_1901_Marconi, $j_1903_Trouton_Noble, $j_1904_Lorentz, 
-   $j_1905_Einstein_Photoeffekt, $j_1907_Perrin, $j_1908_Ritz, $j_1911_Rutherford, $j_1915_Einstein_ART, $j_1919_Sonnenfinsternis, $j_1925_Michelson_Gale, $j_1931_Hubble, $j_1938_Hahn_Strassmann, $j_1959_Pound_Rebka, $j_1962_Kantor,
+   $j_1905_Einstein_Photoeffekt, $j_1907_Perrin, $j_1908_Ritz, $j_1911_Rutherford, $j_1915_Einstein_ART, $j_1919_Sonnenfinsternis, $j_1924_Hubble_Cepheides, $j_1925_Michelson_Gale,
+   $j_1931_Hubble, $j_1938_Hahn_Strassmann, $j_1959_Pound_Rebka, $j_1962_Kantor,
    $j_1965_CMB_entdeckt, $j_1972_Hafele_Keating, $j_1974_Marinov, $j_1983_Silvertooth, $j_1985_Allan_et_al, $j_1992_vatikan
  );
 
