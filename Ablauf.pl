@@ -416,7 +416,7 @@ my $j_1766_Boscovitch = $graph->node();
 
 my $j_1784_Goodricke = node('1784: John Goodricke:', 'Perioden in Delta Cephei');
 
-
+# _}
 
  # _{ 18xx
  # _{ 1800-
@@ -827,7 +827,13 @@ my $j_1919_Sonnenfinsternis = $graph->node();
        <tr><td align="left">1919, Sonnenfinsternis</td></tr>
        </table>'});
 
+my $j_1920_Shapley_Curtis   = node('1920: Shapley-Curtis Debatte');
+
 my $j_1924_Hubble_Cepheides = node('1924: Hubble bestimmt', 'Distanz zu Andromeda', 'mit Cepheiden');
+
+edge_chain($j_1920_Shapley_Curtis, $j_1924_Hubble_Cepheides);
+
+my $j_1927_Lemaitre = node('1927: G. Lemaître:', 'Raum expandiert');
 
 
 #
@@ -957,7 +963,8 @@ my $j_1992_vatikan = $graph->node();
    $j_1810_Arago, $j_1817_Fresnel, $j_1818_Fresnel, $j_1820_Orsted, $j_1827_Brown, $j_1831_Faraday, $j_1834_Faraday, $j_1838_Bessel, $j_1839_Arago, $j_1845_Stokes, $j_1851_Foucault,
    $j_1864_Maxwell_Electromagnetic_Field, $j_1868_Hoek, $j_1868_Mendelejew, $j_1870_Maxwell, $j_1877_Hertz,
    $j_1871_Airy, $j_1872_Mascart, $j_1873_Veltmann, $j_1886_Lorentz, $j_1887_MM, $j_1889_FitzGerald, $j_1895_Lorentz, $j_1896_Becquerel, $j_1900_Planck, $j_1901_Marconi, $j_1903_Trouton_Noble, $j_1904_Lorentz, 
-   $j_1905_Einstein_Photoeffekt, $j_1907_Perrin, $j_1908_Ritz, $j_1911_Rutherford, $j_1915_Einstein_ART, $j_1919_Sonnenfinsternis, $j_1924_Hubble_Cepheides, $j_1925_Michelson_Gale,
+   $j_1905_Einstein_Photoeffekt, $j_1907_Perrin, $j_1908_Ritz, $j_1911_Rutherford, $j_1915_Einstein_ART, $j_1919_Sonnenfinsternis, $j_1920_Shapley_Curtis,
+   $j_1924_Hubble_Cepheides, $j_1925_Michelson_Gale, $j_1927_Lemaitre,
    $j_1931_Hubble, $j_1938_Hahn_Strassmann, $j_1959_Pound_Rebka, $j_1962_Kantor,
    $j_1965_CMB_entdeckt, $j_1972_Hafele_Keating, $j_1974_Marinov, $j_1983_Silvertooth, $j_1985_Allan_et_al, $j_1992_vatikan
  );
