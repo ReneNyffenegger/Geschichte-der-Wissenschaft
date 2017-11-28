@@ -797,13 +797,8 @@ my $j_1908_Leavitt = node('1908 Leavitt:', '<b>1777 Variables in the Magellanic 
 
   # _}
  # _{ 1910-
-my $j_1911_Rutherford = $graph->node();  # 2016-Mettenheim...pdf  # _{
-      $j_1911_Rutherford->label({html=>'
-       <table border="1" cellborder="0">
-       <tr><td align="left">1911, <b>Rutherford</b></td></tr> 
-       <tr><td align="left">planetarisches Atommodell</td></tr> 
-       </table>'}); #_}
-
+ 
+my $j_1911_Rutherford = node('1911, Rutherford:', '<b>planetarisches Atommodell</b>');
      $graph->edge($j_1834_Faraday, $j_1911_Rutherford);
 
 my $j_1913_De_Sitter = $graph->node(); 
@@ -826,6 +821,9 @@ my $j_1919_Sonnenfinsternis = $graph->node();
        <table border="1" cellborder="0">
        <tr><td align="left">1919, Sonnenfinsternis</td></tr>
        </table>'});
+
+my $j_1919_n_o = node('1919, Rutherford:', '<b>N -&gt; O</b>');
+$graph->same_rank($j_1919_Sonnenfinsternis, $j_1919_n_o);
 
 my $j_1920_Shapley_Curtis   = node('1920: Shapley-Curtis Debatte');
 
@@ -856,7 +854,7 @@ my $j_1931_Hubble = $graph->node();
        <tr><td align="left">Veröffentlicht »Rotverschiebung«</td></tr>
        </table>'});
 
-my $j_1938_Hahn_Strassmann = $graph->node(); # 2016-Mettenheim...pdf  # _{
+my $j_1938_Hahn_Strassmann = $graph->node(); # 2016-Mettenheim...pdf
    $j_1938_Hahn_Strassmann->label({html=>'
        <table border="1" cellborder="0">
        <tr><td align="left">1938, <b>Hahn, Strassmann</b></td></tr> 
