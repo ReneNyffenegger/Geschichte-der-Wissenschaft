@@ -847,12 +847,15 @@ my $j_1925_Michelson_Gale = $graph->node();
        </table>'});
  # _}
  # _{ 1930-
+
 my $j_1931_Hubble = $graph->node(); 
    $j_1931_Hubble->label({html=>'
        <table border="1" cellborder="0">
        <tr><td align="left">1931, <b>Hubble</b></td></tr>
        <tr><td align="left">Veröffentlicht »Rotverschiebung«</td></tr>
        </table>'});
+
+my $j_jansky_radiowellen = node('1935 (1932?): Jansky entdeckt', '<b>Radiowellen aus dem Zentr.</b>', '<b>der Milchstrasse</b>');
 
 my $j_1938_Hahn_Strassmann = $graph->node(); # 2016-Mettenheim...pdf
    $j_1938_Hahn_Strassmann->label({html=>'
@@ -870,6 +873,7 @@ my $j_1959_Pound_Rebka = $graph->node();
    @chain = edge_chain($j_1905_Einstein_SRT, $j_1913_De_Sitter, $j_1915_Einstein_ART, $j_1919_Sonnenfinsternis, $j_1959_Pound_Rebka);
    same_attributes('color', "#a37a33", @chain); #  Tests der Relativitätstheorie
  # _}
+ # _{ 1960 -
 
 my $j_1962_Kantor = $graph->node(); 
    $j_1962_Kantor->label({html=>'
@@ -918,7 +922,7 @@ my $j_1992_vatikan = $graph->node();
 
  # _}
  
-
+ # _}
 
    @chain = edge_chain($j_Aristoteles, $j_1554_Benedetti, $j_1572_Brahe, $j_1577_Brahe, $j_1592_De_Motu, $j_1604_Kepler, $j_1647_Pascal, $j_1687_Newton);
    same_attributes('color', 'red', @chain); # Widerlegungen von Aristoteles
@@ -963,7 +967,7 @@ my $j_1992_vatikan = $graph->node();
    $j_1871_Airy, $j_1872_Mascart, $j_1873_Veltmann, $j_1886_Lorentz, $j_1887_MM, $j_1889_FitzGerald, $j_1895_Lorentz, $j_1896_Becquerel, $j_1900_Planck, $j_1901_Marconi, $j_1903_Trouton_Noble, $j_1904_Lorentz, 
    $j_1905_Einstein_Photoeffekt, $j_1907_Perrin, $j_1908_Ritz, $j_1911_Rutherford, $j_1915_Einstein_ART, $j_1919_Sonnenfinsternis, $j_1920_Shapley_Curtis,
    $j_1924_Hubble_Cepheides, $j_1925_Michelson_Gale, $j_1927_Lemaitre,
-   $j_1931_Hubble, $j_1938_Hahn_Strassmann, $j_1959_Pound_Rebka, $j_1962_Kantor,
+   $j_1931_Hubble, $j_jansky_radiowellen, $j_1938_Hahn_Strassmann, $j_1959_Pound_Rebka, $j_1962_Kantor,
    $j_1965_CMB_entdeckt, $j_1972_Hafele_Keating, $j_1974_Marinov, $j_1983_Silvertooth, $j_1985_Allan_et_al, $j_1992_vatikan
  );
 
