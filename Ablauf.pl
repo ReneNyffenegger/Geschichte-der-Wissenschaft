@@ -480,7 +480,6 @@ my $j_181x_Arago = $graph->node();
    @chain = edge_chain($j_1800_Herschel, $j_1801_Ritter, $j_181x_Arago);
    same_attributes('color', 'grey', @chain);
 
-   # _}
 
 my $j_1817_Fresnel = $graph->node(); 
    $j_1817_Fresnel->label({html=>'
@@ -497,6 +496,7 @@ my $j_1818_Fresnel = $graph->node();
        </table>'});
    $graph->edge($j_181x_Arago , $j_1818_Fresnel);
 
+   # _}
  # _{ 1820-
 
 my $j_1820_Orsted = $graph->node(); 
@@ -546,6 +546,8 @@ my $j_1839_Arago = $graph->node();
  # _}
  # _{ 1840- 
 
+my $j_1842_dopplerefekt = node('1842: <b>Dopplereffekt</b>');
+
 my $j_1845_Stokes = $graph->node(); 
    $j_1845_Stokes->label({html=>'
        <table border="1" cellborder="0">
@@ -568,7 +570,7 @@ my $j_1851_Foucault = $graph->node();
        </table>'});
    $graph->edge($j_1661_Viviani , $j_1851_Foucault);
    
-   $graph->same_rank($j_1661_Viviani, $j_1851_Foucault);
+   $graph->same_rank($j_1851_Fizeau, $j_1851_Foucault);
 
 my $j_1864_Maxwell_Electromagnetic_Field = $graph->node(); 
    $j_1864_Maxwell_Electromagnetic_Field->label({html=>'
@@ -593,7 +595,11 @@ my $j_1868_Mendelejew = $graph->node(); #  2016-Mettenheim...pdf
        <tr><td align="left">Periodensystem der Elemente</td></tr> 
        </table>'});
 
-   $graph->same_rank($j_1868_Mendelejew, $j_1868_Hoek);
+   $graph->edge($j_1808_Dalton , $j_1868_Mendelejew);
+   
+   my $j_1868_huggins = node('1868: William Huggins bestimmt', '<b>Geschwindigkeit eines Sterns</b>', 'mit dem Dopplereffekt');
+
+   $graph->same_rank($j_1868_Mendelejew, $j_1868_Hoek, $j_1868_huggins);
 
 my $j_1870_Maxwell = $graph->node(); 
    $j_1870_Maxwell->label({html=>'
@@ -602,9 +608,10 @@ my $j_1870_Maxwell = $graph->node();
        <tr><td align="left">Lichtgeschwindigkeit = c, kein Inertialsystem im Vakuum!</td></tr>
        </table>'});
 
-   $graph->edge($j_1808_Dalton , $j_1868_Mendelejew);
  # _}
- # _{ 1860-
+ # _{ 1870-
+
+
 my $j_1871_Airy = $graph->node(); 
    $j_1871_Airy->label({html=>'
        <table border="1" cellborder="0">
@@ -947,6 +954,8 @@ my $j_1992_vatikan = $graph->node();
 
    edge_chain($j_1818_Fresnel, $j_1871_Airy, $j_1887_MM);
 
+   @chain = edge_chain($j_1842_dopplerefekt, $j_1868_huggins); # The Astronomy Book, p. 158
+   same_attributes('color', '#ddabcd', @chain);
 
 
 
@@ -962,7 +971,8 @@ my $j_1992_vatikan = $graph->node();
    $j_1632_galilei_dialogo, $j_1633_Inquisition, $j_1638_johannes_hevelius, $j_1638_galilei_discorsi, $j_1639_pieroni, $j_1643_Torricelli, $j_1644_Descartes, $j_1647_Pascal, $j_1661_Viviani,
    $j_1669_Hooke, $j_1670_Roemer, $j_1678_Huygens, $j_1687_Newton, $j_1694_Flamsteed, $j_1704_Newton, $j_1717_Newton, $j_1726_Bradley, $j_1766_Boscovitch, $j_1784_Goodricke, $j_1800_Herschel,
    $j_1801_Ritter, $j_1802_Young, $j_1804_Young, $j_1808_Dalton, $j_1809_Malus,
-   $j_1810_Arago, $j_1817_Fresnel, $j_1818_Fresnel, $j_1820_Orsted, $j_1827_Brown, $j_1831_Faraday, $j_1834_Faraday, $j_1838_Bessel, $j_1839_Arago, $j_1845_Stokes, $j_1851_Foucault,
+   $j_1810_Arago, $j_1817_Fresnel, $j_1818_Fresnel, $j_1820_Orsted, $j_1827_Brown, $j_1831_Faraday, $j_1834_Faraday, $j_1838_Bessel, $j_1839_Arago, $j_1842_dopplerefekt,
+   $j_1845_Stokes, $j_1851_Foucault,
    $j_1864_Maxwell_Electromagnetic_Field, $j_1868_Hoek, $j_1868_Mendelejew, $j_1870_Maxwell, $j_1877_Hertz,
    $j_1871_Airy, $j_1872_Mascart, $j_1873_Veltmann, $j_1886_Lorentz, $j_1887_MM, $j_1889_FitzGerald, $j_1895_Lorentz, $j_1896_Becquerel, $j_1900_Planck, $j_1901_Marconi, $j_1903_Trouton_Noble, $j_1904_Lorentz, 
    $j_1905_Einstein_Photoeffekt, $j_1907_Perrin, $j_1908_Ritz, $j_1911_Rutherford, $j_1915_Einstein_ART, $j_1919_Sonnenfinsternis, $j_1920_Shapley_Curtis,
@@ -971,7 +981,8 @@ my $j_1992_vatikan = $graph->node();
    $j_1965_CMB_entdeckt, $j_1972_Hafele_Keating, $j_1974_Marinov, $j_1983_Silvertooth, $j_1985_Allan_et_al, $j_1992_vatikan
  );
 
-   same_attributes('style'    , 'invisible', @chain);
+#  same_attributes('style'    , 'invisible', @chain);
+   same_attributes('color'    , 'red'      , @chain);
    same_attributes('arrowhead', 'none'     , @chain);
    #[style=invisible arrowhead=none];
 
