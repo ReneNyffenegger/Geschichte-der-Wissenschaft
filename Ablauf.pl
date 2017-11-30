@@ -852,6 +852,12 @@ my $j_1925_Michelson_Gale = $graph->node();
        <table border="1" cellborder="0">
        <tr><td align="left">1925, <b>Michelson Gale</b></td></tr>
        </table>'});
+
+my $j_1929_hubble = node('1929: Hubble', 'Rotl.-versch ~ Distanz');
+
+@chain = edge_chain($j_1842_dopplerefekt, $j_1868_huggins, $j_1929_hubble); # The Astronomy Book, p. 158
+same_attributes('color', '#ddabcd', @chain);
+
  # _}
  # _{ 1930-
 
@@ -954,8 +960,6 @@ my $j_1992_vatikan = $graph->node();
 
    edge_chain($j_1818_Fresnel, $j_1871_Airy, $j_1887_MM);
 
-   @chain = edge_chain($j_1842_dopplerefekt, $j_1868_huggins); # The Astronomy Book, p. 158
-   same_attributes('color', '#ddabcd', @chain);
 
 
 
@@ -976,7 +980,7 @@ my $j_1992_vatikan = $graph->node();
    $j_1864_Maxwell_Electromagnetic_Field, $j_1868_Hoek, $j_1868_Mendelejew, $j_1870_Maxwell, $j_1877_Hertz,
    $j_1871_Airy, $j_1872_Mascart, $j_1873_Veltmann, $j_1886_Lorentz, $j_1887_MM, $j_1889_FitzGerald, $j_1895_Lorentz, $j_1896_Becquerel, $j_1900_Planck, $j_1901_Marconi, $j_1903_Trouton_Noble, $j_1904_Lorentz, 
    $j_1905_Einstein_Photoeffekt, $j_1907_Perrin, $j_1908_Ritz, $j_1911_Rutherford, $j_1915_Einstein_ART, $j_1919_Sonnenfinsternis, $j_1920_Shapley_Curtis,
-   $j_1924_Hubble_Cepheides, $j_1925_Michelson_Gale, $j_1927_Lemaitre,
+   $j_1924_Hubble_Cepheides, $j_1925_Michelson_Gale, $j_1927_Lemaitre, $j_1929_hubble,
    $j_1931_Hubble, $j_jansky_radiowellen, $j_1938_Hahn_Strassmann, $j_1959_Pound_Rebka, $j_1962_Kantor,
    $j_1965_CMB_entdeckt, $j_1972_Hafele_Keating, $j_1974_Marinov, $j_1983_Silvertooth, $j_1985_Allan_et_al, $j_1992_vatikan
  );
