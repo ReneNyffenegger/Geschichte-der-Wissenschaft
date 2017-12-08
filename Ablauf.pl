@@ -698,6 +698,8 @@ my  $j_1895_Lorentz = $graph->node(); #  2016-Mettenheim...pdf
        </table>'});
    $graph->edge($j_1834_Faraday , $j_1895_Lorentz);
 
+my $j_1895_roentgenstrahlung = node('1895: <b>Röntgenstrahlung</b>');
+    $graph->same_rank($j_1895_roentgenstrahlung, $j_1895_Lorentz);
 
 my $j_1896_Becquerel = $graph->node(); 
    $j_1896_Becquerel->label({html=>'
