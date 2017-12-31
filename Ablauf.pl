@@ -13,13 +13,13 @@ my $graph = GraphViz::Graph->new('Ablauf-perl');
  #_{ Antike
 my $j_Pythagoras = node('<b>Pythagoras</b> (570-510)');
 
+my $j_demokrit = node('Demokrit (ca. 460-371): <b>Atommodell</b>');
+
 my $j_Platon = node('<b>Platon</b> (428-347)', 'Schüler von Sokrates');
 
 my $j_Eudoxos = node('<b>Eudoxos</b> (405-355)', 'Über Geschwindigkeiten', '<b>Homozentr. Modell</b>:', '1. geom.-kinem. Planetenmodell');
 
 my $j_Kallppos = node('<b>Kallippos</b>', 'Erweiterung des Planetenmodells', 'um 7 weitere Sphären');
-
-
 
 my $j_Aristoteles = node('<b>Aristoteles</b> (384-322)');
 
@@ -456,12 +456,10 @@ my $j_1804_Young = $graph->node();
        <tr><td align="left">Äther bewegt sich ungehindert durch Materie.</td></tr>
        </table>'});
 
-my $j_1808_Dalton = $graph->node();# 2016-Mettenheim...pdf 
-   $j_1808_Dalton->label({html=>'
-       <table border="1" cellborder="0">
-       <tr><td align="left">1808, <b>Dalton</b></td></tr> 
-       <tr><td align="left">Elemente bestehen aus gleichartigen<br align="left"/>letzten Teilchen.<br align="left"/></td></tr> 
-       </table>'});
+my $j_1808_Dalton = node('1808, Dalton: Elemente bestehen aus\ngleichartigen letzten Teilchen: <b>Atomen</b>');          # 2016-Mettenheim...pdf 
+
+ @chain = edge_chain($j_demokrit, $j_1808_Dalton);
+ same_attributes('color', 'green', @chain);
 
 my $j_1809_Malus = $graph->node(); 
    $j_1809_Malus->label({html=>'
@@ -484,6 +482,7 @@ my $j_181x_Arago = $graph->node();
        <tr><td align="left">181x, <b>Arago</b></td></tr>
        <tr><td align="left">erklärt Versuchsergebnis: Auge sieht nur<br align="left"/>Teil des Lichtspektrums.<br align="left"/></td></tr>
        </table>'});
+
    @chain = edge_chain($j_1800_Herschel, $j_1801_Ritter, $j_181x_Arago);
    same_attributes('color', 'grey', @chain);
 
@@ -986,7 +985,7 @@ same_attributes('color', '#fe3982', @chain);
 
 
    @chain = edge_chain(
-   $j_Pythagoras, $j_Platon, $j_Eudoxos, $j_Kallppos,
+   $j_Pythagoras, $j_demokrit, $j_Platon, $j_Eudoxos, $j_Kallppos,
    $j_Aristoteles, $j_Aristarch, $j_archimedes_sandrechnung, $j_apollonios_epizykel, $j_hipparchos_exzenter, $j_Almagest, $j_1080_Toledaner_Tafeln, $j_1230_tractatus_sphaera,
    $j_1270_Alfonsinische_Tafeln,
    $j_cusanus, $j_1472_neue_planetentheorie,
