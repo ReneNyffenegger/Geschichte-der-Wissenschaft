@@ -157,12 +157,7 @@ my $j_1572_Brahe = $graph->node();
        </table>'});
 
 
-my $j_1577_Brahe = $graph->node(); 
-   $j_1577_Brahe->label({html=>'
-       <table border="1" cellborder="0">
-       <tr><td align="left">1577, Tycho Brahe, <b>Komet</b></td></tr>
-       <tr><td align="left">Keine Parallaxe bei Kometen<br align="left"/>gemesen. Kometen durchdringen<br align="left"/>angebl. Sphären<br align="left"/></td></tr>
-       </table>'});
+my $j_1577_Brahe = node('1577, Brahe: Bei <b>Komet</b> keine\nParallaxe gemessen. Kometen durch-\ndringen angebl. Sphären'); 
 
  # _}
     #_}
