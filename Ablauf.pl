@@ -907,6 +907,8 @@ my $j_1965_CMB_entdeckt = $graph->node();
        <tr><td align="left">1965, <b>CMB entdeckt</b> von Penzias und Wilson</td></tr>
        </table>'});
 
+my $j_1970_Rotation_Andromeda_Nebel = node('1970, Rubin u. Ford:\n<b>Rotationskurve d. Andromedanebels</b>');
+
 my $j_1972_Hafele_Keating = $graph->node(); 
    $j_1972_Hafele_Keating->label({html=>'
        <table border="1" cellborder="0">
@@ -1006,7 +1008,7 @@ same_attributes('color', '#fe3982', @chain);
    $j_1905_Einstein_Photoeffekt, $j_1907_Perrin, $j_1908_Ritz, $j_1911_Rutherford, $j_1912_kosmische_Strahlung, $j_1913_De_Sitter, $j_1915_Einstein_ART, $j_1919_Sonnenfinsternis, $j_1920_Shapley_Curtis,
    $j_1924_Hubble_Cepheides, $j_1925_Michelson_Gale, $j_1927_Lemaitre, $j_1929_hubble,
    $j_1931_Hubble, $j_1932_chadwick, $j_1934_zwicky_baade, $j_jansky_radiowellen, $j_1938_Hahn_Strassmann, $j_1948_alpher_herman, $j_1957_shmaonov, $j_1959_Pound_Rebka, $j_1962_Kantor,
-   $j_1964_quarks, $j_1965_CMB_entdeckt, $j_1972_Hafele_Keating, $j_1974_Marinov, $j_1983_Silvertooth, $j_1985_Allan_et_al, $j_1992_vatikan, $j_2010_wmap
+   $j_1964_quarks, $j_1965_CMB_entdeckt, $j_1970_Rotation_Andromeda_Nebel, $j_1972_Hafele_Keating, $j_1974_Marinov, $j_1983_Silvertooth, $j_1985_Allan_et_al, $j_1992_vatikan, $j_2010_wmap
  );
 
 #  same_attributes('style'    , 'invisible', @chain);
