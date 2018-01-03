@@ -1052,7 +1052,6 @@ sub node {
     </table>"});
 
   if ($url) {
-    print "Adding URL $url\n";
     $nd -> set_attribute('URL', $url);
   }
 
