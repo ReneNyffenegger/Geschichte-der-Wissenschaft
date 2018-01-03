@@ -8,7 +8,7 @@ use utf8;
 
 use GraphViz::Graph;
 
-my $graph = GraphViz::Graph->new('Ablauf-perl');
+my $graph = GraphViz::Graph->new('Ablauf');
 
  #_{ Antike
 my $j_Pythagoras = node('<b>Pythagoras</b> (570-510)');
@@ -570,7 +570,9 @@ my $j_1851_Foucault = $graph->node();
    
    $graph->same_rank($j_1851_Fizeau, $j_1851_Foucault);
 
-my $j_1864_Maxwell_Electromagnetic_Field = node('1864, Maxwell: <b>Electromagnetic Fields</b>', 'Äther existiert');
+my $j_1859_Strahlungsgesetz = node('1859: <b>Kirhoffsches Strahlungsgesetz</b>');
+
+my $j_1864_Maxwell_Electromagnetic_Field = node('1864, Maxwell: <b>Electromagnetic Fields</b>', 'Licht is Welle; Äther existiert');
 
    
 
@@ -677,6 +679,8 @@ my $j_1889_Heaviside = $graph->node();
 
    $graph->edge($j_1864_Maxwell_Electromagnetic_Field , $j_1889_Heaviside);
 
+my $j_1893_Wiensches_Verschiebungsgesetz = node('1893: <b>Wiensches Verschiebungsgesetz</b>', {notes=>'Wissenschaft/Physik/Gesetze/Wiensches-Strahlungsgesetz'});
+
 my  $j_1895_Lorentz = $graph->node(); #  2016-Mettenheim...pdf
     $j_1895_Lorentz->label({html=>'
        <table border="1" cellborder="0">
@@ -731,14 +735,10 @@ my $j_1904_Lorentz = $graph->node();
        <tr><td align="left">1904, <b>Lorentz</b></td></tr>
        </table>'});
 
-my $j_1905_Einstein_Photoeffekt = $graph->node(); 
-   $j_1905_Einstein_Photoeffekt->label({html=>'
-       <table border="1" cellborder="0">
-       <tr><td align="left">1905, Einstein, <b>Photoeffekt</b></td></tr>
-       </table>'});
+my $j_1905_Einstein_Photoeffekt = node('1905, Einstein: <b>Photoeffekt</b>\nLicht besteht aus Quanten'); 
 
-  @chain=edge_chain($j_antike_lichtstrahlen, $j_1669_Newton, $j_1678_Huygens, $j_1802_Young, $j_1905_Einstein_Photoeffekt);
-  same_attributes('color', "#2263b7", @chain);  # Natur des Lichts
+@chain=edge_chain($j_antike_lichtstrahlen, $j_1669_Newton, $j_1678_Huygens, $j_1802_Young, $j_1864_Maxwell_Electromagnetic_Field, $j_1905_Einstein_Photoeffekt);
+ same_attributes('color', "#2263b7", @chain);  # Natur des Lichts
 
   $graph->edge($j_1887_Hertz_Photoeffekt, $j_1905_Einstein_Photoeffekt);
     
@@ -1002,9 +1002,9 @@ same_attributes('color', '#fe3982', @chain);
    $j_1766_Boscovitch, $j_1784_Goodricke, $j_1800_Herschel,
    $j_1801_Ritter, $j_1802_Young, $j_1804_Young, $j_1808_Dalton, $j_1809_Malus,
    $j_1810_Arago, $j_1817_Fresnel, $j_1818_Fresnel, $j_1820_Orsted, $j_1827_Brown, $j_1831_Faraday, $j_1834_Faraday, $j_1838_Bessel, $j_1839_Arago, $j_1842_dopplerefekt,
-   $j_1845_Stokes, $j_1851_Foucault,
+   $j_1845_Stokes, $j_1851_Foucault, $j_1859_Strahlungsgesetz,
    $j_1864_Maxwell_Electromagnetic_Field, $j_1868_Hoek, $j_1868_Mendelejew, $j_1870_Maxwell, $j_1877_Hertz,
-   $j_1871_Airy, $j_1872_Mascart, $j_1873_Veltmann, $j_1886_Lorentz, $j_1887_MM, $j_1889_FitzGerald, $j_1895_Lorentz, $j_1896_Becquerel, $j_1897_elektron, $j_1900_Planck, $j_1901_Marconi, $j_1903_Trouton_Noble, $j_1904_Lorentz, 
+   $j_1871_Airy, $j_1872_Mascart, $j_1873_Veltmann, $j_1886_Lorentz, $j_1887_MM, $j_1889_FitzGerald, $j_1893_Wiensches_Verschiebungsgesetz, $j_1895_Lorentz, $j_1896_Becquerel, $j_1897_elektron, $j_1900_Planck, $j_1901_Marconi, $j_1903_Trouton_Noble, $j_1904_Lorentz, 
    $j_1905_Einstein_Photoeffekt, $j_1907_Perrin, $j_1908_Ritz, $j_1911_Rutherford, $j_1912_kosmische_Strahlung, $j_1913_De_Sitter, $j_1915_Einstein_ART, $j_1919_Sonnenfinsternis, $j_1920_Shapley_Curtis,
    $j_1924_Hubble_Cepheides, $j_1925_Michelson_Gale, $j_1927_Lemaitre, $j_1929_hubble,
    $j_1931_Hubble, $j_1932_chadwick, $j_1934_zwicky_baade, $j_jansky_radiowellen, $j_1938_Hahn_Strassmann, $j_1948_alpher_herman, $j_1957_shmaonov, $j_1959_Pound_Rebka, $j_1962_Kantor,
@@ -1024,21 +1024,37 @@ sub node {
 
   my $trs='';
 
-  for my $line (@_) {
+  my $url = '';
+  for my $param (@_) {
 
-    my $line_ = $line;
-    if ($line_ =~ s!\\n!<br align="left"/>!g) {
+    if (ref $param eq 'HASH') {
 
-      $line_ .= '<br align="left"/>';
+      if ($url = delete $param->{notes}) {
+        $url = "http://renenyffenegger.ch/notes/$url";
+      }
+
     }
+    else {
 
-    $trs .= "<tr><td align='left'>$line_</td></tr>";
+      my $line_ = $param;
+      if ($line_ =~ s!\\n!<br align="left"/>!g) {
+  
+        $line_ .= '<br align="left"/>';
+      }
+  
+      $trs .= "<tr><td align='left'>$line_</td></tr>";
+    }
   }
 
   my $nd = $graph->node();
   $nd->label({html=>"<table border='1' cellborder='0'>
       $trs
     </table>"});
+
+  if ($url) {
+    print "Adding URL $url\n";
+    $nd -> set_attribute('URL', $url);
+  }
 
   return $nd;
 
