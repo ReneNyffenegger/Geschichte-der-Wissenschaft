@@ -149,12 +149,7 @@ my $j_1563_tafeln_falsch=node('1563: Brahe findet:', 'Alfons. u. prut. Tafeln fa
 
  # _{ 1572
 
-my $j_1572_Brahe = $graph->node(); 
-   $j_1572_Brahe->label({html=>'
-       <table border="1" cellborder="0">
-       <tr><td align="left">1572, <b>Tycho Brahe</b></td></tr>
-       <tr><td align="left">Beobachtung einer Supernova</td></tr>
-       </table>'});
+my $j_1572_Brahe = node('1572: Brahe beobachtet <b>Supernova</b>', {notes => 'Wissenschaft/Geozentrik/Personen/Tycho-Brahe#brahe-supernova-1572'});
 
 
 my $j_1577_Brahe = node('1577, Brahe: Bei <b>Komet</b> keine\nParallaxe gemessen. Kometen durch-\ndringen angebl. Sphären'); 
@@ -825,7 +820,9 @@ my $j_1924_Hubble_Cepheides = node('1924: Hubble bestimmt\nDistanz zu Andromeda\
 edge_chain($j_1920_Shapley_Curtis, $j_1924_Hubble_Cepheides);
 
 my $j_1927_Lemaitre = node('1927: G. Lemaître:', 'Raum expandiert (Uratom)');
+my $j_1927_Rotation_Galaxie = node('1927: Lindblad/Oort:\nRotierende Galaxie');
 
+$graph -> same_rank($j_1927_Lemaitre, $j_1927_Rotation_Galaxie);
 
 #
 #
@@ -1006,10 +1003,13 @@ same_attributes('color', '#fe3982', @chain);
    $j_1964_quarks, $j_1965_CMB_entdeckt, $j_1970_Rotation_Andromeda_Nebel, $j_1972_Hafele_Keating, $j_1974_Marinov, $j_1983_Silvertooth, $j_1985_Allan_et_al, $j_1992_vatikan, $j_2010_wmap
  );
 
-#  same_attributes('style'    , 'invisible', @chain);
-   same_attributes('color'    , 'red'      , @chain);
+ if ('hide ordering edges') {
+   same_attributes('style'    , 'invisible', @chain);
    same_attributes('arrowhead', 'none'     , @chain);
-   #[style=invisible arrowhead=none];
+ }
+ else {
+   same_attributes('color'    , 'red'      , @chain);
+ }
 
 
   
