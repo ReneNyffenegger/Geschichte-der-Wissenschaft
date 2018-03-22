@@ -216,11 +216,7 @@ my $j_1609_david_fabricius = node('David Fabricius entdeckt <b>Mira</b>');
 
 $graph->same_rank($j_1609_Astronomia_nova, $j_1609_david_fabricius);
 
-my $j_1610_sidereus_nuncius = $graph->node(); 
-   $j_1610_sidereus_nuncius->label({html=>'
-       <table border="1" cellborder="0">
-       <tr><td align="left">1610, Galileo, <b>Sidereus Nuncius</b></td></tr>
-       </table>'});
+my $j_1610_sidereus_nuncius = node('1610 Galileo: <b>Sidereus Nuncius</b>', 'Schlag für Aristotelismus');
 
 my $j_1612_sonnenflecken = $graph->node(); 
    $j_1612_sonnenflecken->label({html=>'
