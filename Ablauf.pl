@@ -556,7 +556,13 @@ my $j_1851_Foucault = $graph->node();
    
    $graph->same_rank($j_1851_Fizeau, $j_1851_Foucault);
 
-my $j_1859_Strahlungsgesetz = node('1859: <b>Kirhoffsches Strahlungsgesetz</b>');
+my $j_1859_Strahlungsgesetz = $graph->node(); # node('1859: <b>Kirhoffsches Strahlungsgesetz</b>');
+   $j_1859_Strahlungsgesetz->label({html =>'
+     <table border="1" cellborder="0">
+       <tr><td align="left">1859: <b>Kirchoffsches Strahlungsgesetz</b></td></tr>
+       <tr><td align="left">Offenbar keine Männchen auf Sonnen</td></tr>
+       <tr><td align="left">wie von Voltaire etc. formuliert</td></tr>
+      </table> '});
 
 my $j_1864_Maxwell_Electromagnetic_Field = node('1864, Maxwell: <b>Electromagnetic Fields</b>', 'Licht is Welle; Äther existiert');
 
