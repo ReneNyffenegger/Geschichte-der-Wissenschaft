@@ -241,6 +241,11 @@ my $j_1618_kometen = node('1618: <b>Kometen</b>');
      <tr><td align="left">1620, <b>Bacon</b>: Novum Organum</td></tr>
    </table>'});
 
+my $nova = $graph->edge($j_1609_Astronomia_nova, $j_1620_Bacon_Novum_Organum);
+$nova->label({text=>'Nova/nuvum'});
+$nova->set_attribute('color','royalblue');
+$nova->set_attribute('fontcolor','royalblue');
+
 my $j_1627_Rudolfinische_Tafeln = node('1627, Kepler:', '<b>Rudolfinische Tafeln</b>'); 
 #  $j_1627_Rudolfinische_Tafeln->label({html=>'
 #      <table border="1" cellborder="0">
@@ -300,8 +305,10 @@ my $j_1644_Descartes = $graph->node();
    $j_1644_Descartes->label({html=>'
        <table border="1" cellborder="0">
        <tr><td align="left">1644, <b>Descartes</b></td></tr>
-       <tr><td align="left">Principia philosophiae</td></tr>
+       <tr><td align="left">Principia philosophiæ</td></tr>
        </table>'});
+
+
 
 my $j_1647_Pascal = $graph->node(); 
    $j_1647_Pascal->label({html=>'
@@ -359,7 +366,12 @@ my $j_1678_Huygens = $graph->node();
        <tr><td align="left">Wellentheorie</td></tr>
        </table>'});
 
-my $j_1687_Newton = node('1687, Newton: <b>Principia Mathematica</b>', 'Gravitations- und', 'drei Bewegungsgesetze');
+my $j_1687_Newton = node('1687, Newton: <b>Principia Mathematica</b>', 'Gravitations- und\ndrei Bewegungsgesetze');
+
+my $principia = $graph->edge($j_1644_Descartes, $j_1687_Newton);
+   $principia->label({text=>'Prinzipien'});
+   $principia->set_attribute('color','royalblue');
+   $principia->set_attribute('fontcolor','royalblue');
    
 my $newton_formeln = $graph->edge($j_1609_Astronomia_nova, $j_1687_Newton);
    $newton_formeln->label({text=>'Newton liefert Formeln'});
