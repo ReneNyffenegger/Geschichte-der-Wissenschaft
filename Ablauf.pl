@@ -976,7 +976,8 @@ same_attributes('color', '#fe3982', @chain);
  
  # _}
 
-   @chain = edge_chain($j_Aristoteles, $j_1554_Benedetti, $j_1572_Brahe, $j_1577_Brahe, $j_1592_De_Motu, $j_1604_Kepler, $j_1647_Pascal, $j_1687_Newton);
+   @chain = edge_chain($j_Aristoteles, $j_1554_Benedetti, $j_1572_Brahe, $j_1577_Brahe, $j_1592_De_Motu, $j_1604_Kepler, $j_1609_Astronomia_nova,
+   $j_1610_sidereus_nuncius, $j_1612_sonnenflecken, $j_1647_Pascal, $j_1687_Newton);
    same_attributes('color', 'red', @chain); # Widerlegungen von Aristoteles
 
    $graph->edge($j_1911_Rutherford , $j_1938_Hahn_Strassmann);
