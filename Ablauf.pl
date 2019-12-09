@@ -285,12 +285,7 @@ $graph -> same_rank($j_1638_johannes_hevelius, $j_1638_galilei_discorsi);
 #  j_1610_sidereus_nuncius  -> j_1632_galilei_dialogo -> j_1638_galilei_discorsi;
    
 
-my $j_1639_pieroni = $graph->node(); 
-   $j_1639_pieroni->label({html=>'
-       <table border="1" cellborder="0">
-       <tr><td align="left">1639, Pieroni meint, eine<br align="left"/><b>Parallaxe</b> entdeckt zu haben.<br align="left"/>War wohl die Aberration.<br align="left"/></td></tr>
-       </table>'});
-
+my $j_1639_pieroni = node('1693: Pieroni meint, eine\n<b>Parallaxe</b> endteckt zu haben.\nWar wohl die Aberration'); 
    
  # _}
  #_{ 1640 -
@@ -414,7 +409,6 @@ my $j_1726_Bradley = $graph->node();
        <tr><td align="left">Möchte Hookes Parallaxe<br align="left"/>überprüfen, entdeckt<br align="left"/>Stellare Aberration<br align="left"/></td></tr>
        <tr><td align="left">Angebl. 1. (astron.) Verifikation von Kopernikus.</td></tr>
        </table>'});
-   $graph->edge($j_1639_pieroni , $j_1726_Bradley);
    
 
 my $j_1755_kant = node ('1755 Kant: <b>Allg. Nat. Gesch.</b>', '<b>u. Theorie d. Himmels</b>');
@@ -538,7 +532,7 @@ my $j_1834_Faraday = $graph->node(); # 2016-Mettenheim...pdf
        </table>'});
 
 my $j_1838_Bessel = node('1838: Bessel: erstmalige', 'Bestimmung Distanz zu Stern', 'mit <b>Parallaxe</b>');
-   $graph->edge($j_1639_pieroni, $j_1838_Bessel);
+#  $graph->edge($j_1639_pieroni, $j_1838_Bessel);
 
 my $j_1839_Arago = $graph->node(); 
    $j_1839_Arago->label({html=>'
@@ -975,20 +969,18 @@ same_attributes('color', '#fe3982', @chain);
  # _}
  
  # _}
+ 
+   my @suche_parallaxe = edge_chain($j_1639_pieroni, $j_1669_Hooke, $j_1694_Flamsteed, $j_1726_Bradley, $j_1838_Bessel);
+   same_attributes('color', '#39fe82', @suche_parallaxe);
 
-   @chain = edge_chain($j_Aristoteles, $j_1554_Benedetti, $j_1572_Brahe, $j_1577_Brahe, $j_1592_De_Motu, $j_1604_Kepler, $j_1609_Astronomia_nova,
+   my @widerlegung_aristoteles = edge_chain($j_Aristoteles, $j_1554_Benedetti, $j_1572_Brahe, $j_1577_Brahe, $j_1592_De_Motu, $j_1604_Kepler, $j_1609_Astronomia_nova,
    $j_1610_sidereus_nuncius, $j_1612_sonnenflecken, $j_1647_Pascal, $j_1687_Newton);
-   same_attributes('color', 'red', @chain); # Widerlegungen von Aristoteles
+   same_attributes('color', 'red', @widerlegung_aristoteles);
 
    $graph->edge($j_1911_Rutherford , $j_1938_Hahn_Strassmann);
 
-   edge_chain($j_1669_Hooke, $j_1694_Flamsteed, $j_1726_Bradley);
-
    $graph->edge($j_1726_Bradley , $j_1845_Stokes);
 
-   my $edge_ = $graph->edge($j_1669_Hooke, $j_1838_Bessel);
-   $edge_->set_attribute('color', 'grey');
-   #[color=grey];
 
    $graph->edge($j_1810_Arago , $j_1871_Airy);
    edge_chain($j_1818_Fresnel, $j_1851_Fizeau, $j_1868_Hoek);
