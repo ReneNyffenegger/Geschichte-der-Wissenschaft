@@ -43,8 +43,6 @@ my $j_Aristarch = node('Aristarch (310-230) formuliert', 'erstes <b>heliozentr.<
 
    my $j_Almagest = node('Ptolemäus (ca 100-160):', '<b>Almagest</b> und <b>Äquant</b>');
 
-my @chain = edge_chain($j_Eudoxos, $j_Kallppos, $j_Aristoteles, $j_apollonios_epizykel, $j_hipparchos_exzenter, $j_Almagest);
-same_attributes('color', '#abcdef', @chain); # Planetenmodell
    
 my $j_archimedes_sandrechnung = node('Archimedes (287-212):', '<b>Sandrechnung</b> zitert', 'Aristarch');
    $graph->edge($j_Aristarch, $j_archimedes_sandrechnung);
@@ -64,6 +62,10 @@ my $j_1270_Alfonsinische_Tafeln = $graph->node();
        <table border="1" cellborder="0">
        <tr><td align="left">1270 <b>Alfonsinische Tafeln</b></td></tr>
        </table>'});
+ #_}
+
+ # _{ 13xx
+my $j_1377_oresme = node('Nicole Oresme', '1377: Le Livre du Ciel et du Monde');
  #_}
 
  # _{ 14xx
@@ -116,7 +118,6 @@ my $j_1543_De_Revolutionibus = $graph->node();
    $graph->edge($j_Almagest, $j_1543_De_Revolutionibus);
    $graph->edge($j_Aristarch, $j_1543_De_Revolutionibus);
    $graph->edge($j_1513_Middelburg, $j_1543_De_Revolutionibus);
-   $graph->edge($j_1510_Commentariolus, $j_1543_De_Revolutionibus);
 
 my $j_1550_Peucer = $graph->node(); 
    $j_1550_Peucer->label({html=>'
@@ -252,7 +253,7 @@ my $j_1627_Rudolfinische_Tafeln = node('1627, Kepler:', '<b>Rudolfinische Tafeln
 #      <tr><td align="left">1627, Kepler: <b>Rudolfinische Tafeln</b></td></tr>
 #      </table>'});
 
-   @chain =edge_chain($j_1080_Toledaner_Tafeln, $j_1270_Alfonsinische_Tafeln, $j_1551_Prutenische_Tafeln, $j_1627_Rudolfinische_Tafeln);
+   my @chain =edge_chain($j_1080_Toledaner_Tafeln, $j_1270_Alfonsinische_Tafeln, $j_1551_Prutenische_Tafeln, $j_1627_Rudolfinische_Tafeln);
    same_attributes('color', '#33e651', @chain); # Ephemeriden
 
    
@@ -993,12 +994,14 @@ same_attributes('color', '#fe3982', @chain);
    edge_chain($j_1818_Fresnel, $j_1871_Airy, $j_1887_MM);
 
 
+   my @path_to_revolutionibus = edge_chain($j_Eudoxos, $j_Kallppos, $j_Aristoteles, $j_apollonios_epizykel, $j_hipparchos_exzenter, $j_Almagest, $j_1377_oresme, $j_1510_Commentariolus, $j_1543_De_Revolutionibus);
+   same_attributes('color', '#abcdef', @path_to_revolutionibus);
 
 
    @chain = edge_chain(
    $j_Pythagoras, $j_demokrit, $j_Platon, $j_Eudoxos, $j_Kallppos,
    $j_Aristoteles, $j_Aristarch, $j_archimedes_sandrechnung, $j_apollonios_epizykel, $j_hipparchos_exzenter, $j_Almagest, $j_1080_Toledaner_Tafeln, $j_1230_tractatus_sphaera,
-   $j_1270_Alfonsinische_Tafeln,
+   $j_1270_Alfonsinische_Tafeln, $j_1377_oresme,
    $j_cusanus, $j_1472_neue_planetentheorie,
    $j_1492_Kolumbus, $j_1510_Commentariolus, $j_1513_Middelburg, $j_1517_Reformation, $j_1539_luther, $j_1543_De_Revolutionibus, $j_1550_Peucer, $j_1551_Prutenische_Tafeln,
    $j_1554_Benedetti, $j_giordano_bruno,  $j_1563_tafeln_falsch, $j_1572_Brahe,
