@@ -198,6 +198,9 @@ my $j_1596_Mysterium_Cosmographicum = $graph->node();
  # _{ 16xx
 
  # _{ 1600-1619
+
+my $j_1603_mundus_novus = node('1603, Vespucci', '<b>Mundus Novus</b>');
+
 my $j_1604_Kepler = $graph->node(); 
    $j_1604_Kepler->label({html=>'
        <table border="1" cellborder="0">
@@ -236,14 +239,18 @@ my $j_1618_kometen = node('1618: <b>Kometen</b>');
  # _}
  # _{ 1620-1639
 
-  my $j_1620_Bacon_Novum_Organum = $graph->node(); 
-   $j_1620_Bacon_Novum_Organum->label({html=>'
-   <table border="1" cellborder="0">
-     <tr><td align="left">1620, <b>Bacon</b>: Novum Organum</td></tr>
-   </table>'});
+# my $j_1620_Bacon_Novum_Organum = $graph->node(); 
+  my $j_1620_Bacon_Novum_Organum = node('1620 Bacon', '<b>Novum Organum</b>');
+#  $j_1620_Bacon_Novum_Organum->label({html=>'
+#  <table border="1" cellborder="0">
+#    <tr><td align="left">1620, <b>Bacon</b>: Novum Organum</td></tr>
+#  </table>'});
 
+my $nova_1 = $graph->edge($j_1603_mundus_novus, $j_1609_Astronomia_nova);
 my $nova = $graph->edge($j_1609_Astronomia_nova, $j_1620_Bacon_Novum_Organum);
-$nova->label({text=>'Nova/nuvum'});
+$nova_1->label({text=>'Nova/nuvum'});
+$nova_1->set_attribute('color','royalblue');
+$nova_1->set_attribute('fontcolor','royalblue');
 $nova->set_attribute('color','royalblue');
 $nova->set_attribute('fontcolor','royalblue');
 
@@ -1006,7 +1013,7 @@ same_attributes('color', '#fe3982', @chain);
    $j_1492_Kolumbus, $j_1510_Commentariolus, $j_1513_Middelburg, $j_1517_Reformation, $j_1539_luther, $j_1543_De_Revolutionibus, $j_1550_Peucer, $j_1551_Prutenische_Tafeln,
    $j_1554_Benedetti, $j_giordano_bruno,  $j_1563_tafeln_falsch, $j_1572_Brahe,
    $j_1577_Brahe, $j_1582_Kalenderreform, $j_1587_Reimers, $j_1588_Tycho_De_mundi,
-   $j_1592_De_Motu, $j_1596_Mysterium_Cosmographicum, $j_1604_Kepler, $j_1609_david_fabricius, $j_1609_Astronomia_nova, $j_1610_sidereus_nuncius, $j_1612_sonnenflecken,
+   $j_1592_De_Motu, $j_1596_Mysterium_Cosmographicum, $j_1603_mundus_novus, $j_1604_Kepler, $j_1609_david_fabricius, $j_1609_Astronomia_nova, $j_1610_sidereus_nuncius, $j_1612_sonnenflecken,
    $j_1616_index, $j_1618_kometen, $j_1620_Bacon_Novum_Organum, $j_1627_Rudolfinische_Tafeln,
    $j_1632_galilei_dialogo, $j_1633_Inquisition, $j_1638_johannes_hevelius, $j_1638_galilei_discorsi, $j_1639_pieroni, $j_1643_Torricelli, $j_1644_Descartes, $j_1647_Pascal, $j_1661_Viviani,
    $j_1669_Hooke, $j_1670_Roemer, $j_1678_Huygens, $j_1687_Newton, $j_1694_Flamsteed, $j_1704_Newton, $j_1705_halley, $j_1717_Newton, $j_1726_Bradley, $j_1755_kant,
