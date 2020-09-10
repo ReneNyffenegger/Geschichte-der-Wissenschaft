@@ -17,7 +17,12 @@ my $j_demokrit = node('Demokrit (ca. 460-371): <b>Atommodell</b>');
 
 my $j_Platon = node('<b>Platon</b> (428-347)', 'Schüler von Sokrates');
 
-my $j_Eudoxos = node('<b>Eudoxos</b> (405-355)', 'Über Geschwindigkeiten', '<b>Homozentr. Modell</b>:', '1. geom.-kinem. Planetenmodell');
+my $j_Eudoxos = node(
+   '<b>Eudoxos</b> (405-355)',
+   'Über Geschwindigkeiten',
+   '<b>Homozentr. Modell</b>:',
+   '1. geom.-kinem. Planetenmodell',
+   'keine Erklärung für Helligkeits-\nunterschiede der Planeten\nwährend eines Jahres.');
 
 my $j_Kallppos = node('<b>Kallippos</b>', 'Erweiterung des Planetenmodells', 'um 7 weitere Sphären');
 
