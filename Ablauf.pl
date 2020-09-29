@@ -377,7 +377,7 @@ my $j_1678_Huygens = $graph->node();
 my $j_1687_Newton = node('1687, Newton: <b>Principia Mathematica</b>', 'Gravitations- und\ndrei Bewegungsgesetze');
 
 my $principia = $graph->edge($j_1644_Descartes, $j_1687_Newton);
-   $principia->label({text=>'Prinzipien'});
+   $principia->label({text=>'Prinzipien/Äther'});
    $principia->set_attribute('color','royalblue');
    $principia->set_attribute('fontcolor','royalblue');
    
