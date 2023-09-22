@@ -435,6 +435,13 @@ my $j_1766_Boscovitch = $graph->node();
 
 my $j_1784_Goodricke = node('1784: John Goodricke:', 'Perioden in Delta Cephei');
 
+my $j_1785_Hutton = $graph->node();
+   $j_1785_Hutton->label({html=>'
+   <table border="1" cellborder="0">
+       <tr><td align="left">1785, James Hutton: <b>Theory of the Earth</b></td></tr>
+       <tr><td align="left">Abkehr von Flut-Geologie</td></tr>
+   </table>'});
+
 # _}
 
  # _{ 18xx
@@ -514,6 +521,7 @@ my $j_1818_Fresnel = $graph->node();
        </table>'});
    $graph->edge($j_181x_Arago , $j_1818_Fresnel);
 
+
    # _}
  # _{ 1820-
 
@@ -524,6 +532,15 @@ my $j_1820_Orsted = $graph->node();
        </table>'});
 
 my $j_1827_Brown = node('1827, Brown: <b>Zitterbewegung</b>');
+
+my $j_1829_Lyell = $graph->node(); 
+   $j_1829_Lyell->label({html=>'
+       <table border="1" cellborder="0">
+       <tr><td align="left">1829, Charles Lyell: <b>Principles of Geology</b></td></tr>
+       <tr><td align="left">Uniformitarianism</td></tr>
+       </table>'});
+
+   $graph->edge($j_1785_Hutton, $j_1829_Lyell);
 
 my $j_1831_Cauchy = $graph->node(); 
    $j_1831_Cauchy->label({html=>'
@@ -1022,9 +1039,9 @@ same_attributes('color', '#fe3982', @chain);
    $j_1616_index, $j_1618_kometen, $j_1620_Bacon_Novum_Organum, $j_1627_Rudolfinische_Tafeln,
    $j_1632_galilei_dialogo, $j_1633_Inquisition, $j_1638_johannes_hevelius, $j_1638_galilei_discorsi, $j_1639_pieroni, $j_1643_Torricelli, $j_1644_Descartes, $j_1647_Pascal, $j_1661_Viviani,
    $j_1669_Hooke, $j_1670_Roemer, $j_1678_Huygens, $j_1687_Newton, $j_1694_Flamsteed, $j_1704_Newton, $j_1705_halley, $j_1717_Newton, $j_1726_Bradley, $j_1755_kant,
-   $j_1766_Boscovitch, $j_1784_Goodricke, $j_1800_Herschel,
+   $j_1766_Boscovitch, $j_1784_Goodricke, $j_1785_Hutton, $j_1800_Herschel,
    $j_1801_Ritter, $j_1802_Young, $j_1804_Young, $j_1808_Dalton, $j_1809_Malus,
-   $j_1810_Arago, $j_1817_Fresnel, $j_1818_Fresnel, $j_1820_Orsted, $j_1827_Brown, $j_1831_Faraday, $j_1834_Faraday, $j_1838_Bessel, $j_1839_Arago, $j_1842_dopplerefekt,
+   $j_1810_Arago, $j_1817_Fresnel, $j_1818_Fresnel, $j_1820_Orsted, $j_1827_Brown, $j_1829_Lyell, $j_1831_Faraday, $j_1834_Faraday, $j_1838_Bessel, $j_1839_Arago, $j_1842_dopplerefekt,
    $j_1845_Stokes, $j_1851_Foucault, $j_1859_Strahlungsgesetz,
    $j_1864_Maxwell_Electromagnetic_Field, $j_1868_Hoek, $j_1868_Mendelejew, $j_1870_Maxwell, $j_1877_Hertz,
    $j_1871_Airy, $j_1872_Mascart, $j_1873_Veltmann, $j_1886_Lorentz, $j_1887_MM, $j_1889_FitzGerald, $j_1893_Wiensches_Verschiebungsgesetz, $j_1895_Lorentz, $j_1896_Becquerel, $j_1897_elektron, $j_1900_Planck, $j_1901_Marconi, $j_1903_Trouton_Noble, $j_1904_Lorentz, 
